@@ -14,7 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
+" plugin from http:
+//vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -91,18 +92,25 @@ set number
 set encoding=utf-8
 
 
+" Adds in the ability to hit <F9> to execute Python code
+:autocmd FileType python :nmap <F9> :! clear <CR> :! python % <Enter>
 
 
 
-" Plugins
-Plugin 'tmhedberg/SimpylFold'	" Python folding
-Plugin 'vim-scripts/indentpython.vim'	" Python indent
-Plugin 'nvie/vim-flake8'	" PEP 8 checking
-Plugin 'scrooloose/nerdtree'
+" Plugins - :PluginInstall in Vim for Vundle to install plugins listed here
+
+Plugin 'tmhedberg/SimpylFold'	" https://github.com/tmhedberg/SimpylFold.git
+Plugin 'vim-scripts/indentpython.vim'	
+" https://github.com/vim-scripts/indentpython.vim.git
+Plugin 'nvie/vim-flake8'	" https://github.com/nvie/vim-flake8.git
+Plugin 'scrooloose/nerdtree' 	" https://github.com/scrooloose/nerdtree.git
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tpope/vim-fugitive'
-
-
+" https://github.com/jistr/vim-nerdtree-tabs.git
+Plugin 'tpope/vim-fugitive'		" https://github.com/tpope/vim-fugitive.git
+Plugin 'tpope/vim-repeat'		" https://github.com/tpope/vim-repeat.git
+Plugin 'tpope/vim-surround' 	" https://tpope.io/vim/surround.git
+Plugin 'tpope/vim-commentary'	" https://tpope.io/vim/commentary.git
+Plugin 'davidhalter/jedi-vim'	" http://github.com/davidhalter/jedi-vim
 
 
 

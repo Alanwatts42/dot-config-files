@@ -2,6 +2,7 @@ set nocompatible
 filetype plugin on 
 syntax on
 
+" Allows the same .vimrc file to be used on both Windows and Linux (WSL)
 if has("win32")
   set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
   call vundle#begin('$USERPROFILE/vimfiles/bundle/')
@@ -10,52 +11,55 @@ else
   call vundle#rc()
 endif
 
-"set rtp+=~/.vim/bundle/Vundle.vim/ call vundle#rc()
-" set the runtime path to include vundle and initialize
-"call vundle#begin()
-" alternatively, pass a path where vundle should install plugins
-" i.e. call vundle#begin('~/some/path/here')
-"
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
 
-" let vundle manage vundle, required
+" --Vundle--
 Plugin 'VundleVim/Vundle.vim'
 
-" --Plugins--
-"
+" --My-Plugins--
+" Additional info for each plugin available by searching single-quoted name on github.
+" For example: " Plugin 'vim-syntastic/syntastic'" can be found at: 
+" https://github.com/vim-syntastic/syntastic
+" All plugins repositories are just: "https://github.com/" followed by 
+" the plugin's name (in single quotes after the word "Plugin" for each one)
 
 " General Formatting
-Plugin 'gabrielelana/vim-markdown'
+Plugin 'godlygeek/tabular' " Req'd for vim-markdown
+Plugin 'plasticboy/vim-markdown'
 Plugin 'vimwiki/vimwiki'
 
-" Python
-Plugin 'w0rp/ale'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'wellle/targets.vim'
+" --IDE and Coding--
 
-" Python
-Plugin 'davidhalter/jedi-vim'
-Plugin 'sentientmachine/Pretty-Vim-Python'
-Plugin 'klen/rope-vim'
+" Python Code Linting and Syntax Highlighting
+Plugin 'vim-airline/vim-airline'  " Adds useful info line bottom of screen
+Plugin 'vim-airline/vim-airline-themes'  " Enables themes for vim-airline
+Plugin 'vim-syntastic/syntastic'  " Linter - Uses 'Pylint'-See Config Section 
+Plugin 'wellle/targets.vim'  " Additional editor commands-see github page  
+Plugin 'davidhalter/jedi-vim'  " Python linter/debugger
+Plugin 'sentientmachine/Pretty-Vim-Python'  " Python Syntax highlighting
+Plugin 'klen/rope-vim'  " Use <leader><j> docs lookup for selected py code 
 Plugin 'vim-scripts/indentpython.vim'
-
-" General IDE
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'FooSoft/vim-argwrap'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-commentary'
-Plugin 'vim-scripts/pylint.vim'
-Plugin 'thaerkh/vim-workspace'
-
+Plugin 'tmhedberg/SimpylFold'  " Code folding using <spacebar>
+Plugin 'michaeljsmith/vim-indent-object' " See vim-indent-object section below
+Plugin 'FooSoft/vim-argwrap'  " Rearrange args within () using <leader><a>
+Plugin 'Valloric/YouCompleteMe'  " auto-complete/linter for multiple languages
+Plugin 'tpope/vim-repeat'  " I honestly forgot what this one does
+Plugin 'tpope/vim-surround'  " easy manipulation of surround chars
+Plugin 'tpope/vim-commentary'  " may be dupe w/'tcomment_vim' - (on, testing)
+Plugin 'vim-scripts/pylint.vim'  " python linter
+Plugin 'thaerkh/vim-workspace'  " let vim manage project workspaces
+Plugin 'jalvesaq/vimcmdline'  " run code on external terminal
+" Plugin 'tomtom/tcomment_vim'  " gc or gcc to comment/uncomment - (off)
+" Plugin 'w0rp/ale' " Redundant Linter until configured correctly - (off)
 
 " Github
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
+Plugin 'junegunn/gv.vim'  " Git diff tool - vim-fugitive req'd
+Plugin 'sodapopcan/vim-twiggy'  " Git branch manager - vim-fugitive req'd
+Plugin 'airblade/vim-gitgutter'  " Git diff manager
+Plugin 'christoomey/vim-conflicted'  " Helps with git merge and rebase conflicts
 
 
 " Javascript
@@ -63,150 +67,194 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'leshill/vim-json'
 
-" Color schemes
+" Look and Feel
 Plugin 'reedes/vim-thematic'    " Manage Vim’s appearance
-"Plugin 'fcpg/vim-orbital'
 
-
-call vundle#end()		" required
-filetype plugin indent on	" required
+call vundle#end()   " required
+filetype plugin indent on   " required
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
-"
+
+
+" --Plugin Configuration--
+
+"  :PluginList    - lists configured plugins
+"  :PluginInstall   - installs plugins
+"  :PluginSearch foo    - searches for foo
+"  :PluginClean   - confirms removal of unused plugins;
+
 " --Look & Feel--
 colorscheme darkblue
-"set background=dark
-"set guifont="Hack 10"
-"set guifont=Hack\ 10
-" --Colorscheme--
-"  Just type 'colorscheme' followed by name of colorscheme
-"  http://vimcolors.com
-"  None selected currently
-"
-"
-" --Plugin Configuration--
-"
-"  :PluginList			- lists configured plugins
-"  :PluginInstall		- installs plugins
-"  :PluginSearch foo		- searches for foo
-"  :PluginClean			- confirms removal of unused plugins;
-"
-
 
 " -Vim-Rope-
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 
+" -Vim-Argwrap-
+nnoremap <silent> <leader>a :ArgWrap<CR>  " 'FooSoft/vim-argwrap' config
+
 " -Vim Airline-
 " Vim-airline theme selector 
 let g:airline_theme='lucius'
-
 
 " Align line-wise comment delimiters flush left instead of following code
 " indentation
 let g:NERDDefaultAlign = 'left'
 
 
+" --Vim-Indent-Object--
+" Below are config settings for above plugin 'vim-indent-object
+" this creates an easy way of selecting entire blocks of code at a time
+" which this can do easily for python since it uses indents as a delimiter. " enables 'ai' to select "an indent", and 'ii' to select "an inner indent"" GitHub repo: http://github.com/michaeljsmith/vim-indent-object
+
+onoremap <silent>ai :<C-U>cal <SID>IndTxtObj(0)<CR>
+onoremap <silent>ii :<C-U>cal <SID>IndTxtObj(1)<CR>
+vnoremap <silent>ai :<C-U>cal <SID>IndTxtObj(0)<CR><Esc>gv
+vnoremap <silent>ii :<C-U>cal <SID>IndTxtObj(1)<CR><Esc>gv
+
+" Vim.org page: http://www.vim.org/scripts/script.php?script_id=3037
+
+function! IndTxtObj(inner)
+  let curline = line(".")
+  let lastline = line("$")
+  let i = indent(line(".")) - &shiftwidth * (v:count1 - 1)
+  let i = i < 0 ? 0 : i
+  if getline(".") =~ "^\\s*$"
+    return
+  endif
+  let p = line(".") - 1
+  let nextblank = getline(p) =~ "^\\s*$"
+  while p > 0 && (nextblank || indent(p) >= i )
+    -
+    let p = line(".") - 1
+    let nextblank = getline(p) =~ "^\\s*$"
+  endwhile
+  if (!a:inner)
+    -
+  endif
+  normal! 0V
+  call cursor(curline, 0)
+  let p = line(".") + 1
+  let nextblank = getline(p) =~ "^\\s*$"
+  while p <= lastline && (nextblank || indent(p) >= i )
+    +
+    let p = line(".") + 1
+    let nextblank = getline(p) =~ "^\\s*$"
+  endwhile
+  if (!a:inner)
+    +
+  endif
+  normal! $
+endfunction
+" Code is from: https://vim.fandom.com/wiki/Indent_text_object
 
 
-" -NERDTree-
-" Run NERDTree automatically when Vim opens up a directory (folder)
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0]
+" --Syntastic--
+" Pylint must be pre-installed, usually with 'pip install pylint'
+let g:syntastic_python_checkers = ['pylint']  " Sets 'Pylint' as linter
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" Mostly from the reccommended settings for Syntastic from below faq page:
+" https://github.com/vim-syntastic/syntastic#faqinfo
 
-" Map open NERDTree to ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+" --Non-IDE-Settings--
+ 
+" Text-encoding/shortcut-keys
+set encoding=utf-8  " Use utf-8 encoding
+let mapleader = ","  " Set <leader> key to ',' <comma>
 
-" Close vim if the only window left open is a NERDTree
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Making vim act normal (like every other text editor)
+set clipboard=unnamed  " Allows some typical clipboard functions
+set ru  " Show cursor position even if inactive
+set noeb  " Attempt to silence error dings for console vim
+set lazyredraw  " Makes Vim run a bit faster (in theory)
+set mouse=a  " Limited mouse functionality
+set ww=<,>,h,l  " ww = commands allowed to 'wrap' around EOL
 
+" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement> 
+map <c-j> <c-w>j 
+map <c-k> <c-w>k 
+map <c-l> <c-w>l 
+map <c-h> <c-w>h
 
-" ---Formatting/Key-Remaps---
+" Set <F2> to toggle "paste mode" on/off, which resolves indent issue
+" when using ctrl+v to paste into terminal. 
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+" Source: https://vim.fandom.com/wiki/Toggle_auto-indenting_for_code_paste
+" Note: typically only necessary if pasting > one line of text
 
-" utf-8 encoding
-set encoding=utf-8
-
-" Set <leader> key to ','
-let mapleader = ","
-
-" normal clipboard
-set clipboard=unnamed
-
-" Stop annoying noises
-set noerrorbells
-
-" Makes Vim run a bit faster (in theory)
-set lazyredraw
 
 " Turn off buffer activity for file save/resume 
 set nobackup
 set noswapfile
 
-" Smarter <Tab> behavior
-set smarttab
-
-" Shift+tab = <<
+" Shift+tab = <<  aka backwards <tab> (works in normal mode)
 nmap <S-Tab> <<
 imap <S-Tab> <Esc><<i
 
-" Ignore case for searches (smart = excludes regex)
-set ignorecase
-set smartcase
-
-" Highlight what you're searching for
-set hlsearch
-
-" Searches as you type
-set incsearch
+set smarttab  " Enable smarter <tab> behavior 
+set backspace=indent,eol,start  " Makes backspace work as it should 
 
 
-"  Quickly select the text that was just pasted
+" --'Minimal-Setup'-Options-- 
+set bs=2  " backspace=2 allows backspacing over indents and EOLs
+set nosol  " nostartofline - prevent cursor from changing column
+" --cguckes.net/vim/setup.html--
+
+
+ set hlsearch  " Highlights what you're searching for
+ set incsearch " Searches as you type
+
+" Shortcut to select the text you just searched
 noremap gV '[v']
 
-" Stay in visual mode when indenting
+" Allow multiple >> indent without disrupting visual mode (way easier)
 vnoremap < <gv
 vnoremap > >gv
 
-" Assign Y to select remainder of te current line
-" and copy to clipboard
+" Y (capital) yank (copy) from cursor position end of current line
 noremap Y y$
 
-" In command mode (i.e. after pressing ':') 
-" Allows %% to represent path of current dir
+" %% = current working directory (useful in ':'  command mode)
 inoremap <C-e> <C-o>$
 
-" Replace selected word and all of it's occurrences
+" Find & replace all - <leader>rc (',' is leader for my config so: ',rc'
 nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
 vnoremap <Leader>rc y:$s/<C-r>"/
 
-
-" ---Python-IDE---
-" *Necessary to make Vim act like a Python IDE*
-"
 " Python PEP 8 formatting
 au BufNewFile,BufRead *.py
- set tabstop=4
- set softtabstop=4
- set shiftwidth=4
- set textwidth=80
- set wrap
- set expandtab
+ set tabstop=4     
+ set softtabstop=4 
+ set shiftwidth=4  
+ set textwidth=80   
+ set wrap 
+ set expandtab      
  set autoindent
+ let python_highlight_all=1  " -Python syntax highlighting-
+ syntax on
+" Auto PEP-8 style formatting for '.py' python files
+" tab = 4 spaces, indent = 4 spaces, line wrap after 80 characters, etc.
 
-" -Python code highlighting-
-let python_highlight_all=1
-syntax on
-
-" Line numbering
-set number
-
-" Auto-complete for brackets () [] {}
-set showmatch
+set number  " IDE style line numbering
+set showmatch  " Auto-complete for brackets () [] {}
+set sc  " Display incomplete commands
 
 " Execute Python code in current file with <F9>
-autocmd Filetype python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <buffer> <F9> :exec '!python' shellescape(%)<cr>
 
 " ---Javascript---
+
+
+" Automatically opens new html files with a custom template or 'skeleton'
+au BufNewFile *.html    0r ~/.vim/skeleton.html
 
 " Tab settings for .js, .html, .css
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -214,3 +262,9 @@ au BufNewFile,BufRead *.js, *.html, *.css
  set softtabstop=2
  set shiftwidth=2
 
+" --Experimental-or-Unfinished--
+" Theoretical setup for executing javascript code 
+" (just took the one for python and replaced 'Python' with
+" 'Javascript', it's not certain to work
+" autocmd Filetype Javascript nnoremap <buffer> <F9> :exec '!javascript' 
+" shellescape(@%, 1)<cr>

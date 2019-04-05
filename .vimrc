@@ -19,10 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " --My-Plugins--
 " Additional info for each plugin available by searching single-quoted name on github.
-" For example: " Plugin 'vim-syntastic/syntastic'" can be found at: 
 " https://github.com/vim-syntastic/syntastic
-" All plugins repositories are just: "https://github.com/" followed by 
-" the plugin's name (in single quotes after the word "Plugin" for each one)
 
 " General Formatting
 Plugin 'godlygeek/tabular' " Req'd for vim-markdown

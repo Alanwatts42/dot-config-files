@@ -69,6 +69,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 """ ==Git and Version Control==
 Plug 'tpope/vim-fugitive' " Git wrapper - control git with vim commands i.e. :Gcommit = git commit
+Plug 'tpope/vim-rhubarb' " front-end for :Gbrowse - specifically github
 Plug 'junegunn/gv.vim' " diff tool - requires vim-fugitive to run
 Plug 'sodapopcan/vim-twiggy' " branch manager for git repositories
 Plug 'airblade/vim-gitgutter'  " diff tool - shows changes made to file being edited (as long as it's part of a git repo)

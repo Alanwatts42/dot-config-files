@@ -1,0 +1,39 @@
+"
+" dotvim : https://github.com/dotphiles/dotvim
+"
+" Setup vim and load required plugins before dotvim
+"
+" Authors:
+"   Ben O'Hara <bohara@gmail.com>
+"
+
+" Call dotvim
+source ~/.vim/dotvim.vim
+
+if has("user_commands")
+  set nocompatible
+  filetype off
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+  let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
+  let g:neocomplcache_enable_at_startup = 1
+  " Load vundles 
+  source ~/.vim/vundles.vim
+  " Add extra bundles here...
+
+  Plugin 'tpope/vim-rhubarb'
+  Plugin 'junegunn/gv.vim'  " Git diff tool - vim-fugitive req'd
+  Plugin 'sodapopcan/vim-twiggy'  " Git branch manager - vim-fugitive req'd
+  Plugin 'airblade/vim-gitgutter'  " Git diff manager
+  Plugin 'christoomey/vim-conflicted'  " Helps with git merge and rebase conflicts
+endif
+
+" Override colorscheme from base16
+
+syntax on
+" Customize to your needs...
+
+
+
+
+

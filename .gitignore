@@ -1,0 +1,24 @@
+# https://github.com/Alanwatts42/vimrc.git
+#
+# Git ignore
+#
+# Author: Evan Sherwood
+# 
+# This repo is in my $HOME directory (which is also the '~' directory in my Ubuntu 18.04
+# Linux environment using Windows Subsystem for Linux (WSL)). Therefore, I found it easier
+# to simply ignore all files in the directory other than the ones I want to include in the
+# repository, rather than use symlinks or some other method to put my .vimrc file
+# somewhere else. 
+#
+# '.*' and '/*' makes git ignore everything that isn't also listed in the gitignore with 
+# a '!' meaning 'do not' ignore. I found this easier since my .vimrc is in my $HOME folder
+# and I didn't want to have to worry about symlinks or other workaround.
+
+.*
+/*
+!.vimrc
+!README.md
+!.vim/ftplugin
+!.vim/autoload
+!.vim/templates
+!.gitignore

@@ -14,13 +14,12 @@
 # a '!' meaning 'do not' ignore. I found this easier since my .vimrc is in my $HOME folder
 # and I didn't want to have to worry about symlinks or other workaround.
 
-.*
-/*
-!.vimrc
-!README.md
-!.vim/*
-!.vim/bundle
-!.vim/ftplugin
-!.vim/autoload
-!.vim/templates
-!.gitignore
+
+# !.vimrc
+# !README.md
+# !.vim/*
+# !.vim/bundle
+# !.vim/ftplugin
+# !.vim/autoload
+# !.vim/templates
+# !.gitignore

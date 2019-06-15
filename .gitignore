@@ -18,7 +18,8 @@
 /*
 !.vimrc
 !README.md
-!.vim
+!.vim/*
+!.vim/bundle
 !.vim/ftplugin
 !.vim/autoload
 !.vim/templates

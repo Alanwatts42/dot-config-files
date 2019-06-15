@@ -8,9 +8,9 @@ augroup END
 " Allows the same .vimrc file to be used on both Windows and Linux (WSL)
 " defines variable called home, varies based on OS directory system
 if has("win32")
-  let dotvim = 'C:\Users\evanz\vimfiles\'
+  let dotvim = 'C:\Users\evan\vimfiles\'
 else
-  let dotvim = "/mnt/c/users/evanz/.vim/"
+  let dotvim = "/home/evan/.vim/"
 endif
  
 let bundle = dotvim."bundle"
@@ -108,9 +108,31 @@ let g:airline_theme='lucius'
 
 
 
+" ==All-Purpose-Execute==
+" date: 06/14/2019
+" purpose: \map <F6> to: \write current buffer (save file) 
+" \make file executable \Create temp file \execute \dump output to it \new tab
+" \read file in new tab \delete temp file
+" code:
+nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
+     \ :tabnew<CR>:r .tmp.xyz<CR>:silent !rm .tmp.xyz<CR>:redraw!<CR>
+" \\ ==end==
 
 " -Pipenv-Integration-
 let pipenv_venv_path = system('pipenv --venv')
+
+
+" ==File-Type Settings==
+
+" -Templates-
+" Shell Scripts '*.sh' files
+" Python files '*.py' files
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
+    autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
+  augroup END
+endif
 
 
 " ==Useful General Settings==

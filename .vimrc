@@ -1,12 +1,14 @@
 """ Evan's .vimrc
-set nocompatible
+
+set nocompatible    " not compatible with vi, required for certain options
+
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC| if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
-" Allows the same .vimrc file to be used on both Windows and Linux (WSL)
-" defines variable called home, varies based on OS directory system
+" Allows the same .vimrc file to be used on both Windows and Linux (WSL) 
+" defines variable called home, varies based on OS directory system 
 if has("win32")
   let dotvim = 'C:\Users\evan\vimfiles\'
 else
@@ -59,12 +61,10 @@ Plug 'klen/rope-vim' " Use <leader>+j for docs lookup on selected code
 Plug 'tpope/vim-surround'  " easy manipulation of surround chars
 Plug 'tomtom/tcomment_vim' " use gcc to comment/uncomment text under cursor
 Plug 'tpope/vim-commentary'  " tpope doesn't write docs, docs write themselves out of fear.
-" Auto-close when using grouping symbols i.e.'(), [], {}, '', '
-Plug 'somini/vim-autoclose'
-" UNIX shell command helpers, e.g. sudo, chmod, remove etc.
-Plug 'tpope/vim-eunuch'
+Plug 'somini/vim-autoclose' " Auto-close when using grouping symbols i.e.'(), [], {}, '', '
+Plug 'tpope/vim-eunuch' " UNIX shell command helpers, e.g. sudo, chmod, remove etc.
 Plug 'FooSoft/vim-argwrap'  " Rearrange args within () using <leader><a>
-" Plug 'jalvesaq/vimcmdline'  " run code on external terminal
+Plug 'jalvesaq/vimcmdline'  " run code on external terminal
 Plug 'Valloric/YouCompleteMe'
 
 
@@ -77,8 +77,6 @@ Plug 'flazz/vim-colorschemes' " change colorshemes easier
 Plug 'vim-airline/vim-airline' " operative word 'line'
 Plug 'vim-airline/vim-airline-themes'  " Enables themes for vim-airline
 Plug 'christophermca/meta5'  " meta5 colorscheme
-
-" Colorscheme Repo
 Plug 'rafi/awesome-vim-colorschemes'
 
 """ ==Git and Version Control==

@@ -52,8 +52,8 @@ endif
 call plug#begin(bundle)
 
 " ==Pipenv/Virtualenv Integration==
-"Plug 'plytophogy/vim-virtualenv'    " required for vim-pipenv
-"Plug 'PieterjanMontens/vim-pipenv'  " integrates vim/pipenv
+Plug 'plytophogy/vim-virtualenv'    " required for vim-pipenv
+Plug 'PieterjanMontens/vim-pipenv'  " integrates vim/pipenv
 
 """ ==Development Environment and Enhancements==
 Plug 'vim-syntastic/syntastic' " A linter, many options, much correct.
@@ -163,10 +163,11 @@ set linebreak                   " don't cut words on wrap
 set list                        " displaying listchars
 set mouse=a                      " disable mouse
 
+
+
 " Use utf-8 encoding
 set encoding=utf-8
 set number
-
 
 " -Keyboard-Cartography-
 
@@ -207,10 +208,6 @@ vnoremap <Leader>rc y:$s/<C-r>"/
 
 " Toggle relativenumber
 nnoremap <Leader>rnn :set relativenumber!<CR>
-
-" Run python code in current file with F9
-nnoremap <F9> :w<cr>:!python %<cr>
-
 
 " --Screen-Splitting--
 " :sp <path to file you want to split screen with (vertically)

@@ -1,0 +1,115 @@
+[global_config]
+  always_split_with_profile = True
+  dbus = False
+  enabled_plugins = InactivityWatch, CustomCommandsMenu, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  extra_styling = False
+  focus = system
+  geometry_hinting = True
+  handle_size = 0
+  sticky = True
+  suppress_multiple_term_dialog = True
+  title_font = Courier 10 Pitch 10
+  title_hide_sizetext = True
+  title_inactive_bg_color = "#2e3436"
+  title_inactive_fg_color = "#ffffff"
+  title_receive_bg_color = "#000361"
+  title_receive_fg_color = "#d3d7cf"
+  title_transmit_bg_color = "#070707"
+  title_transmit_fg_color = "#aaaaaa"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      order = 1
+      parent = terminal1
+      profile = default
+      type = Terminal
+      uuid = f011a24d-fff0-4726-b9d7-96c40c6b372c
+    [[[terminal1]]]
+      fullscreen = False
+      last_active_term = f011a24d-fff0-4726-b9d7-96c40c6b372c
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 900:1
+      size = 640, 480
+      title = one: ~/Documents/_docs
+      type = Window
+  [[Beta]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 728bb19b-8c9d-47db-8b6d-b0ad94691a50
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 655:15
+      size = 640, 480
+      title = two: ~/
+      type = Window
+    [[[terminal1]]]
+      order = 1
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 728bb19b-8c9d-47db-8b6d-b0ad94691a50
+  [[Gemini]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = f011a24d-fff0-4726-b9d7-96c40c6b372c
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 900:1
+      size = 640, 480
+      title = one: ~/Documents/_docs
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = f011a24d-fff0-4726-b9d7-96c40c6b372c
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#0a0a0a"
+    background_darkness = 0.6
+    cursor_color = "#5186ee"
+    cursor_color_fg = False
+    custom_command = tmux
+    font = Courier New 10
+    foreground_color = "#eeeeec"
+    palette = "#000000:#0b81d7:#0000cd:#a40000:#3465a4:#f57900:#eeeeec:#888a85:#404040:#009adc:#0000cd:#cc0000:#729fcf:#ffa800:#ffffff:#555753"
+    scroll_on_output = True
+    scrollback_lines = 1000
+    scrollbar_position = hidden
+    use_system_font = False
+  [[Picard]]
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    cursor_color_fg = False
+    custom_command = tmux
+    exit_action = hold
+    font = Courier 10 Pitch 10
+    palette = "#2e3436:#cc0000:#ff9900:#4e9a06:#3465a4:#75507b:#0078cf:#d3d7cf:#555753:#ef2929:#f57900:#8ae234:#729fcf:#ad7fa8:#008fcc:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Riker]]
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    cursor_color_fg = False
+    custom_command = tmux
+    exit_action = hold
+    font = Courier 10 Pitch 10
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

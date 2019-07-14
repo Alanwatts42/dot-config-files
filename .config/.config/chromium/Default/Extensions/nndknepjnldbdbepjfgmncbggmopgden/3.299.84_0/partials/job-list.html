@@ -1,0 +1,121 @@
+<div ng-controller="JobListCtrl">
+    <div class="row">
+
+        <div class="col-sm-4">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>Create a New Job:</strong>
+                    <!--<span class="pull-right">-->
+                    <!--<i class="fa fa-lock"></i> Requires subscription to-->
+                    <!--<a href="https://data-miner.io/account" target="_blank">Professional Plan</a> or higher.-->
+                    <!--</span>-->
+                </div>
+                <div class="panel-body">
+                    <strong>
+                        <div class="bg-danger hidden" id="upgrade-message"></div>
+                    </strong>
+
+                    <div class="tool-box" ng-repeat="job in jobs">
+                        <div class="btn btn-primary " ng-click="setJob(job)">
+                            <span ng-bind-html="job.info.image | to_trusted"></span> {{job.info.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="well">
+
+                <h4>{{currentJob.info.name}}</h4>
+
+                <div>{{currentJob.info.description}}</div>
+                <br>
+
+                <div ng-controller="FormCtrl">
+                    <form name="myForm"
+                          sf-schema="schema"
+                          sf-form="form"
+                          sf-model="model"
+                          ng-submit="onSubmit(myForm)">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">How to Scrape A List of URLs
+                    <span class="pull-right">
+                        <a href="mailto:support@dataminer.io"><i class="fa fa-lg fa-bug"></i> Report Bugs</a>
+                   </span>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        With Data Miner you can download pages, images and scrape data from a list of URLs. Just
+                        upload your URLs into a collection and then click on one of the buttons to the right.</p>
+                    <br>
+
+                    <h4>Scrape Pages:</h4>
+
+                    The following are the parameters you can specify for batch URL scraping:
+                    <br>
+                    <br>
+                    <ul class="">
+                        <li><b>Recipe:</b> The the recipe that will be used to scrape each page.</li>
+                        <li><b>Collection:</b> The name of the collection where your have your source URLs.</li>
+                        <li><b>Column # for URLs:</b> The column number in your collection where the URLs reside.</li>
+                        <li><b>Column # for File Names:</b> The column number in your collection where the File Names
+                            reside.
+                        </li>
+                        <li><b>Download Folder Name:</b> The name of the local folder where the files will be saved.
+                        </li>
+                        <li><b>Number of pages:</b> The number of URLs from the collection to be processed. Enter 0
+                            to
+                            process until end of the list.
+                        </li>
+                        <li><b>Wait Time Between Downloads (Seconds):</b> Wait time between downloads.
+                            which you can use to slow down your download speed.
+                        </li>
+                        <li><b>Set Referring Page:</b> This should be left empty for majority of users. If specified,
+                            the HTTP Referrer Header is set to this value.
+                        </li>
+                        <li><b>Job Start Delay:</b> Number of minutes to wait before starting the current job. Can be
+                            used to delay the start of a large job until after office hours when more internet bandwidth
+                            is available.
+                        </li>
+                        <li><b>Follow Paginated Results:</b> If checked and the recipe has Next Page Navigation
+                            rules defined it will follow the paginated results all the way to the end.
+                        </li>
+                    </ul>
+                    <br>
+
+                    <h4>Download Pages:</h4>
+                    When HTML pages are saved .mhtml_remove_this is added to their file name. Rename the file to
+                    .mhtml.
+
+                    <br>
+                    On Mac OSX you can run this command line:<br>
+                    find ~/Downloads/pages/ -iname "*.mhtml_remove_this" -exec bash -c 'mv "$0"
+                    "${0%\.mhtml_remove_this}.mhtml"' {} \;
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Activity Log:</h3>
+            <div ng-controller="FileListCtrl">
+                <div ng-repeat="file in files" class="job-box" ng-class="job-type-{{file.type}}">
+                    <img ng-if="file.img_src != ''" class="job-image" ng-src="{{file.img_src}}">
+                    <span>{{file.item}}  <br>  {{file.message}}</span>
+                </div>
+                <!--<div ng-repeat="file in files">{{file.url}}<span>{{file.message}}</span></div>-->
+            </div>
+        </div>
+    </div>
+
+</div>

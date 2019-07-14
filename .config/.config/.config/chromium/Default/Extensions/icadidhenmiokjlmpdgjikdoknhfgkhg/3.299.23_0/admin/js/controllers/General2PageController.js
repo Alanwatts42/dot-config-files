@@ -1,0 +1,2 @@
+"use strict";angular.module("MetronicApp").controller("General2PageController",["$rootScope","$scope","settings",function(t,e,o){e.$on("$viewContentLoaded",function(){App.initAjax(),t.settings.layout.pageContentWhite=!0,t.settings.layout.pageBodySolid=!0,t.settings.layout.pageSidebarClosed=!1})}]);
+//# sourceMappingURL=../../../../map/admin/js/controllers/General2PageController.js.map

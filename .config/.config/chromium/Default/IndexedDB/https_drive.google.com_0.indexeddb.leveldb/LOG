@@ -1,0 +1,107 @@
+2019/06/27-12:16:25.401 111a Reusing MANIFEST /home/evan/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/06/27-18:43:52.961 256c Level-0 table #5: started
+2019/06/27-18:43:53.113 256c Level-0 table #5: 4266255 bytes OK
+2019/06/27-18:43:53.154 256c Delete type=0 #3
+2019/06/27-19:21:42.826 256c Level-0 table #7: started
+2019/06/27-19:21:42.956 256c Level-0 table #7: 5562838 bytes OK
+2019/06/27-19:21:42.993 256c Delete type=0 #4
+2019/06/27-19:39:20.826 256c Level-0 table #9: started
+2019/06/27-19:39:20.977 256c Level-0 table #9: 5369395 bytes OK
+2019/06/27-19:39:21.017 256c Delete type=0 #6
+2019/06/27-19:51:21.053 256c Level-0 table #11: started
+2019/06/27-19:51:21.169 256c Level-0 table #11: 4629389 bytes OK
+2019/06/27-19:51:21.215 256c Delete type=0 #8
+2019/06/27-20:02:03.933 256c Level-0 table #13: started
+2019/06/27-20:02:04.132 256c Level-0 table #13: 6756976 bytes OK
+2019/06/27-20:02:04.221 256c Delete type=0 #10
+2019/06/27-20:02:59.133 256c Level-0 table #15: started
+2019/06/27-20:02:59.385 256c Level-0 table #15: 7415895 bytes OK
+2019/06/27-20:02:59.424 256c Delete type=0 #12
+2019/06/27-20:02:59.426 256c Compacting 4@0 + 1@1 files
+2019/06/27-20:02:59.673 256c Generated table #16@0: 12 keys, 3769310 bytes
+2019/06/27-20:02:59.751 256c Generated table #17@0: 9 keys, 3655 bytes
+2019/06/27-20:02:59.751 256c Compacted 4@0 + 1@1 files => 3772965 bytes
+2019/06/27-20:02:59.789 256c compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/06/27-20:02:59.789 256c Delete type=2 #13
+2019/06/27-20:02:59.791 256c Delete type=2 #9
+2019/06/27-20:02:59.792 256c Delete type=2 #11
+2019/06/27-20:02:59.793 256c Delete type=2 #15
+2019/06/27-20:02:59.795 256c Delete type=2 #7
+2019/06/27-20:03:37.440 256c Level-0 table #19: started
+2019/06/27-20:03:37.589 256c Level-0 table #19: 7159117 bytes OK
+2019/06/27-20:03:37.637 256c Delete type=0 #14
+2019/06/27-20:07:22.837 256c Level-0 table #21: started
+2019/06/27-20:07:23.001 256c Level-0 table #21: 6968494 bytes OK
+2019/06/27-20:07:23.038 256c Delete type=0 #18
+2019/06/27-20:12:22.820 256c Level-0 table #23: started
+2019/06/27-20:12:22.990 256c Level-0 table #23: 6924076 bytes OK
+2019/06/27-20:12:23.057 256c Delete type=0 #20
+2019/06/27-20:21:48.196 256c Level-0 table #25: started
+2019/06/27-20:21:48.357 256c Level-0 table #25: 6980645 bytes OK
+2019/06/27-20:21:48.397 256c Delete type=0 #22
+2019/06/27-20:21:48.399 256c Compacting 4@0 + 2@1 files
+2019/06/27-20:21:48.491 256c Generated table #26@0: 12 keys, 3534717 bytes
+2019/06/27-20:21:48.558 256c Generated table #27@0: 9 keys, 3655 bytes
+2019/06/27-20:21:48.558 256c Compacted 4@0 + 2@1 files => 3538372 bytes
+2019/06/27-20:21:48.596 256c compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/06/27-20:21:48.596 256c Delete type=2 #21
+2019/06/27-20:21:48.598 256c Delete type=2 #23
+2019/06/27-20:21:48.600 256c Delete type=2 #17
+2019/06/27-20:21:48.600 256c Delete type=2 #19
+2019/06/27-20:21:48.601 256c Delete type=2 #16
+2019/06/27-20:21:48.603 256c Delete type=2 #25
+2019/06/27-20:31:48.430 256c Level-0 table #29: started
+2019/06/27-20:31:48.588 256c Level-0 table #29: 7603883 bytes OK
+2019/06/27-20:31:48.626 256c Delete type=0 #24
+2019/06/27-20:40:36.840 256c Level-0 table #31: started
+2019/06/27-20:40:36.989 256c Level-0 table #31: 7983056 bytes OK
+2019/06/27-20:40:37.033 256c Delete type=0 #28
+2019/06/27-20:52:10.225 256c Level-0 table #33: started
+2019/06/27-20:52:10.395 256c Level-0 table #33: 4310483 bytes OK
+2019/06/27-20:52:10.439 256c Delete type=0 #30
+2019/06/27-20:52:22.944 256c Level-0 table #35: started
+2019/06/27-20:52:23.048 256c Level-0 table #35: 4283221 bytes OK
+2019/06/27-20:52:23.123 256c Delete type=0 #32
+2019/06/27-20:52:23.124 256c Compacting 4@0 + 2@1 files
+2019/06/27-20:52:23.232 256c Generated table #36@0: 12 keys, 4353854 bytes
+2019/06/27-20:52:23.304 256c Generated table #37@0: 9 keys, 3655 bytes
+2019/06/27-20:52:23.304 256c Compacted 4@0 + 2@1 files => 4357509 bytes
+2019/06/27-20:52:23.344 256c compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/06/27-20:52:23.344 256c Delete type=2 #33
+2019/06/27-20:52:23.345 256c Delete type=2 #31
+2019/06/27-20:52:23.346 256c Delete type=2 #26
+2019/06/27-20:52:23.347 256c Delete type=2 #35
+2019/06/27-20:52:23.348 256c Delete type=2 #27
+2019/06/27-20:52:23.348 256c Delete type=2 #29
+2019/06/27-21:20:40.161 256c Level-0 table #39: started
+2019/06/27-21:20:40.293 256c Level-0 table #39: 4587822 bytes OK
+2019/06/27-21:20:40.330 256c Delete type=0 #34
+2019/06/27-21:22:23.169 256c Level-0 table #41: started
+2019/06/27-21:22:23.303 256c Level-0 table #41: 4535765 bytes OK
+2019/06/27-21:22:23.347 256c Delete type=0 #38
+2019/06/27-21:32:14.656 256c Level-0 table #43: started
+2019/06/27-21:32:14.827 256c Level-0 table #43: 4493996 bytes OK
+2019/06/27-21:32:14.864 256c Delete type=0 #40
+2019/06/27-21:50:43.212 256c Level-0 table #45: started
+2019/06/27-21:50:43.352 256c Level-0 table #45: 4644959 bytes OK
+2019/06/27-21:50:43.394 256c Delete type=0 #42
+2019/06/27-21:50:43.395 256c Compacting 4@0 + 2@1 files
+2019/06/27-21:50:43.675 256c Generated table #46@0: 12 keys, 4715586 bytes
+2019/06/27-21:50:43.753 256c Generated table #47@0: 9 keys, 3618 bytes
+2019/06/27-21:50:43.753 256c Compacted 4@0 + 2@1 files => 4719204 bytes
+2019/06/27-21:50:43.815 256c compacted to: files[ 0 2 1 0 0 0 0 ]
+2019/06/27-21:50:43.815 256c Delete type=2 #43
+2019/06/27-21:50:43.816 256c Delete type=2 #45
+2019/06/27-21:50:43.817 256c Delete type=2 #36
+2019/06/27-21:50:43.818 256c Delete type=2 #39
+2019/06/27-21:50:43.819 256c Delete type=2 #41
+2019/06/27-21:50:43.820 256c Delete type=2 #37
+2019/06/27-21:52:23.609 256c Level-0 table #49: started
+2019/06/27-21:52:23.768 256c Level-0 table #49: 4843218 bytes OK
+2019/06/27-21:52:23.846 256c Delete type=0 #44
+2019/06/27-22:00:18.092 256c Level-0 table #51: started
+2019/06/27-22:00:18.229 256c Level-0 table #51: 5119893 bytes OK
+2019/06/27-22:00:18.331 256c Delete type=0 #48
+2019/06/27-22:02:16.040 256c Level-0 table #53: started
+2019/06/27-22:02:16.167 256c Level-0 table #53: 4819056 bytes OK
+2019/06/27-22:02:16.214 256c Delete type=0 #50

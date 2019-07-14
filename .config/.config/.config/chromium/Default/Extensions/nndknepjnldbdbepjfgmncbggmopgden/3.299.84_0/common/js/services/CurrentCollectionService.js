@@ -1,0 +1,2 @@
+"use strict";angular.module("MetronicApp").service("CurrentCollectionService",[function(){return{data:{},name:{}}}]);
+//# sourceMappingURL=../../../../map/common/js/services/CurrentCollectionService.js.map

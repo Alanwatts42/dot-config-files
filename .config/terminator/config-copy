@@ -1,0 +1,164 @@
+[global_config]
+  always_split_with_profile = True
+  dbus = False
+  enabled_plugins = InactivityWatch, CustomCommandsMenu, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  extra_styling = False
+  focus = system
+  geometry_hinting = True
+  handle_size = 0
+  sticky = True
+  suppress_multiple_term_dialog = True
+  title_font = Courier 10 Pitch 10
+  title_hide_sizetext = True
+  title_inactive_bg_color = "#2e3436"
+  title_inactive_fg_color = "#ffffff"
+  title_receive_bg_color = "#000361"
+  title_receive_fg_color = "#d3d7cf"
+  title_transmit_bg_color = "#070707"
+  title_transmit_fg_color = "#aaaaaa"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      order = 1
+      parent = terminal1
+      profile = default
+      type = Terminal
+      uuid = f011a24d-fff0-4726-b9d7-96c40c6b372c
+    [[[terminal1]]]
+      fullscreen = False
+      last_active_term = f011a24d-fff0-4726-b9d7-96c40c6b372c
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 566:1
+      size = 480, 320
+      title = one: ~/Documents/_docs
+      type = Window
+  [[Beta]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 728bb19b-8c9d-47db-8b6d-b0ad94691a50
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 655:15
+      size = 640, 480
+      title = two: ~/
+      type = Window
+    [[[terminal1]]]
+      order = 1
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = 728bb19b-8c9d-47db-8b6d-b0ad94691a50
+  [[Gemini]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = f011a24d-fff0-4726-b9d7-96c40c6b372c
+      last_active_window = False
+      maximised = False
+      order = 0
+      parent = ""
+      position = 566:1
+      size = 800, 600
+      title = one: ~/Documents/_docs
+      type = Window
+    [[[child2]]]
+      fullscreen = False
+      last_active_term = 4299c214-a2a2-4b58-97da-b9748de279c8
+      last_active_window = False
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 642, 402
+      title = evan@evan-acer-es1533: ~/Downloads/etc/xenomai-3.0.9
+      type = Window
+    [[[child4]]]
+      fullscreen = False
+      last_active_term = d9997649-bfc3-420a-bfc2-c9cb2bcf559f
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 138:22
+      size = 1212, 642
+      title = scraper.py (~/_projects/scraper/scraper) - VIM
+      type = Window
+    [[[child5]]]
+      order = 0
+      parent = child4
+      position = 606
+      ratio = 0.5
+      type = HPaned
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = Riker
+      type = Terminal
+      uuid = f011a24d-fff0-4726-b9d7-96c40c6b372c
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = Riker
+      type = Terminal
+      uuid = 4299c214-a2a2-4b58-97da-b9748de279c8
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = Riker
+      type = Terminal
+      uuid = 6c304989-605c-4192-8384-d8cae8c35a26
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = Riker
+      type = Terminal
+      uuid = d9997649-bfc3-420a-bfc2-c9cb2bcf559f
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#0a0a0a"
+    background_darkness = 0.6
+    background_type = transparent
+    cursor_color = "#5186ee"
+    cursor_color_fg = False
+    custom_command = tmux
+    font = Courier New 10
+    foreground_color = "#e1e1e1"
+    login_shell = True
+    palette = "#000000:#0b81d7:#0000cd:#a40000:#3465a4:#f57900:#eeeeec:#888a85:#404040:#009adc:#0000cd:#cc0000:#729fcf:#ffa800:#ffffff:#555753"
+    scroll_on_output = True
+    scrollback_lines = 1000
+    scrollbar_position = hidden
+    use_custom_command = True
+    use_system_font = False
+  [[Picard]]
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    cursor_color_fg = False
+    custom_command = tmux
+    exit_action = hold
+    font = Courier 10 Pitch 10
+    palette = "#2e3436:#cc0000:#ff9900:#4e9a06:#3465a4:#75507b:#0078cf:#d3d7cf:#555753:#ef2929:#f57900:#8ae234:#729fcf:#ad7fa8:#008fcc:#eeeeec"
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Riker]]
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    cursor_color_fg = False
+    custom_command = tmux
+    exit_action = hold
+    font = Courier 10 Pitch 10
+    scroll_on_output = True
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

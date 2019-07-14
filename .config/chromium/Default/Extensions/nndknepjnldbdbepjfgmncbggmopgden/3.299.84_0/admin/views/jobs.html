@@ -1,0 +1,208 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/home">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/jobs">Jobs</a>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE HEADER-->
+
+
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12" data-ng-controller="JobController as jc">
+
+        <div class="row container-fluid">
+            <div class="col-sm-8">
+                <h3 ng-if="jc.jobs.length"><i class="fa fa-tasks"></i> Jobs:</h3>
+                <br>
+
+                <div ng-if="jc.jobs.length" class="text-center">
+                    <div data-ng-repeat="job in jc.jobs" data-ng-click="jc.select(name)" style="border: solid 1px #e5e5e5; margin: 8px 0;padding: 5px;">
+                        <span class="col-sm-5 col-md-5 col-lg-4 pull-left">{{job.name}}</span>
+                        <span>
+                            <button class="btn btn-sm btn-primary" data-ng-click="jc.startJob(job.id)">
+                                <i class="fa fa-play"></i> Run Job
+                            </button>
+                            <button class="btn btn-sm btn-default" data-ng-click="jc.editJob(job.id)">
+                                <i class="fa fa-wrench fa-lg"></i> Edit
+                            </button>
+                            <button class="btn btn-sm btn-default" data-ng-click="jc.deleteJob(job.id)">
+                                <i class="fa fa-trash-o fa-lg"></i> Delete
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="jc.jobStatus" class="col-sm-4 hidden">
+                <h3><i class="fa fa-tasks"></i> Job Running:</h3>
+                <span data-ng-include="'tpl/state-diagram.svg'"></span>
+            </div>
+        </div>
+
+        <div class="alert alert-danger" ng-if="jc.loginError">
+            <span class="ng-binding ng-scope">Please <a href="http://data-miner.io/login">login</a> to view the list of your saved jobs.
+            Contact our  <a href="mailto:support@dataminer.zendesk.com">support team</a> for help. ( Error: {{ jc.loginError }} )</span>
+        </div>
+
+        <div class="alert alert-danger" ng-if="jc.message"> {{jc.message}}</div>
+        <div class="alert alert-danger" ng-if="jc.upgradeMessage" id="upgrade-message" ng-bind-html="jc.upgradeMessage"></div>
+
+
+        <form class="form-horizontal container-fluid" data-ng-submit="submit()">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3><i class="fa fa-plus"></i> Add a New Job:</h3>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="scrape-name" class="col-sm-2 control-label">Job Name:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" ng-model="jc.form1.name" id="scrape-name">
+                        <p class="help-block">A name your job</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Recipe Name:</label>
+                    <div class="col-sm-3">
+                        <!--<select class="form-control" ng-model="jc.form1.recipe" id="scrape-recipe"-->
+                                <!--ng-options="o.id as o.name for o in jc.recipes"></select>-->
+
+                        <ui-select ng-model="jc.form1.recipe_object" theme="bootstrap" id="scrape-recipe">
+                            <ui-select-match>{{jc.form1.recipe_object.name}}</ui-select-match>
+                            <ui-select-choices group-by="'UIType'" repeat="item in jc.recipes">
+                                <span ng-bind-html="item.name"></span>
+                            </ui-select-choices>
+                        </ui-select>
+
+                        <p class="help-block">Name of the recipe to use to scrape pages</p>
+                    </div>
+                    <label for="scrape-url" class="col-sm-1 control-label">URL:</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control inline-elm" ng-model="jc.form1.url" id="scrape-url">
+                        <p class="help-block">Get recipes for a URL. Example: https://www.zillow.com</p>
+                    </div>
+                    <div class="col-sm-1">
+                        <span class="btn btn-default" ng-click="jc.lookupRecipe()">Get Recipes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="scrape-collection" class="col-sm-2 control-label">Source Collection:</label>
+                    <div class="col-sm-3">
+
+                        <select class="form-control" ng-model="jc.form1.collection" id="scrape-collection"
+                                data-ng-controller="CollectionListController as collections">
+                            <option ng-repeat="name in collections.collectionNames" value="{{name.fullName}}">{{name.shortName}}</option>
+                        </select>
+
+                        <p class="help-block">The collection which contains your input URLs</p>
+                    </div>
+                    <label for="scrape-collection" class="col-sm-1 control-label">Column # <br>for URLs</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control short-input" ng-model="jc.form1.position" id="scrape-collection-column">
+                        <p class="help-block">Which column in your collection contains the URLs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="scrape-collection-dest" class="col-sm-2 control-label">Destination Collection</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" ng-model="jc.form1.dest_collection" id="scrape-collection-dest">
+                        <p class="help-block">The Collection where your results will be saved in</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-show="jc.showAdvance">
+                    <label for="scrape-pages" class="col-sm-2 control-label">Limit Range of Rows</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control short-input" ng-model="jc.form1.source_range" id="scrape-pages">
+                        <p class="help-block">Limit the processing of source collection rows. Example: Enter 10- for all rows after row 10, or 5-20
+                            for specific range.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-show="jc.showAdvance">
+                    <label for="scrape-wait-time" class="col-sm-2 control-label">Wait Time Between Scrapes</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control short-input" ng-model="jc.form1.wait_time" id="scrape-wait-time">
+                        <p class="help-block">Number of seconds to wait in between each page scrape. Randomized by 50%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-show="jc.showAdvance">
+                    <label for="scrape-referral" class="col-sm-2 control-label">HTTP Referral Header</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control input-sm" ng-model="jc.form1.referrer_set" id="scrape-referral">
+                        <p class="help-block">Set the HTTP header of the request. (Leave blank in most cases)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-show="jc.showAdvance">
+                    <label for="scrape-start-delay" class="col-sm-2 control-label">Delay Job Start</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control short-input" ng-model="jc.form1.start_delay" id="scrape-start-delay">
+                        <p class="help-block">Number of minutes to wait before starting the job</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-show="jc.showAdvance">
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="jc.form1.follow_pagination"> Follow Paginated page results
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-show="jc.showAdvance">
+                    <label for="scrape-start-delay" class="col-sm-2 control-label">Limit pagination</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control short-input" ng-model="jc.form1.max_pagination" id="max-pagination">
+                        <p class="help-block">Stop following paginated results after the number of pages above is reached.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-9">
+                        <button id="save-button" class="btn btn-primary" data-ng-click="jc.saveJob()" disabled><i class="fa fa-save"></i>&nbsp; Save
+                        </button>
+                        <!--<button class="btn btn-primary" data-ng-click="jc.saveJobAndRun()"><i class="fa fa-play"></i>&nbsp; Save & Run</button>-->
+                        <button class="btn btn-default" data-ng-click="jc.clearForm()"><i class="fa fa-file-o"></i>&nbsp; Clear</button>
+                        <button class="btn btn-default" data-ng-click="jc.toggleAdvance()"><i class="fa fa-gear"></i>&nbsp; Advance Options</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END MAIN CONTENT-->
+
+
+<script>
+</script>
+
+
+

@@ -1,0 +1,31 @@
+
+
+-------session starts-------
+
+[7-9 0:13:33.314] INFO: MediaGallery: name=/home/evan/Music, galleryId=1, isMediaDevice=false, deviceId=undefined
+[7-9 0:13:33.326] INFO: MediaGallery: name=/home/evan/Pictures, galleryId=2, isMediaDevice=false, deviceId=undefined
+[7-9 0:13:33.327] INFO: MediaGallery: name=/home/evan/Videos, galleryId=3, isMediaDevice=false, deviceId=undefined
+[7-9 0:13:33.329] INFO: Starts a quick scan on /home/evan/Music
+[7-9 0:13:33.350] INFO: Iterating over dir / from source /home/evan/Music
+[7-9 0:13:33.351] INFO: Starts a quick scan on /home/evan/Pictures
+[7-9 0:13:33.351] INFO: Iterating over dir / from source /home/evan/Pictures
+[7-9 0:13:33.351] INFO: Starts a quick scan on /home/evan/Videos
+[7-9 0:13:33.352] INFO: Iterating over dir / from source /home/evan/Videos
+[7-9 0:13:33.365] INFO: /home/evan/Music does not contain music file
+[7-9 0:13:33.472] INFO: Iterating over dir /Backgrounds from source /home/evan/Pictures
+[7-9 0:13:33.472] INFO: Iterating over dir /retroarch from source /home/evan/Videos
+[7-9 0:13:33.474] INFO: Got the drag_and_drop directory
+[7-9 0:13:33.519] INFO: /home/evan/Pictures does not contain music file
+[7-9 0:13:33.520] INFO: Iterating over dir /retroarch/genesis from source /home/evan/Videos
+[7-9 0:13:33.606] INFO: Iterating over dir /retroarch/pcengine from source /home/evan/Videos
+[7-9 0:13:33.829] INFO: Iterating over dir /retroarch/snes from source /home/evan/Videos
+[7-9 0:13:33.842] INFO: /home/evan/Videos does not contain music file
+[7-9 0:13:33.900] INFO: lsUserAddedMusicSourceIds=null
+[7-9 0:13:33.900] INFO: lsLastTrackFailureLoggingTime=null
+[7-9 0:13:33.900] INFO: lsUserSelectedDownloadDirId=null
+[7-9 0:13:33.904] INFO: lsDefaultDownloadLocationId=null
+[7-9 0:13:33.905] INFO: Setting is already: lsAlwaysUseDefaultDownloadLocation = false
+[7-9 0:13:33.905] INFO: Setting is already: lsDefaultDownloadLocationId = null
+[7-9 0:13:34.120] WARNING: Tier change detected
+[7-9 0:13:34.120] INFO: Fetched user settings from server.
+[7-9 0:13:34.138] INFO: chromeapp:E ready

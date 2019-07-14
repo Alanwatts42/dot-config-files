@@ -1,0 +1,51 @@
+.page-header.navbar .page-logo .logo-default {
+    margin: 12px 0 0 0;
+}
+
+.margin-r-md {
+    margin-right: 20px;
+}
+
+.margin-t-sm {
+    margin-top: 10px;
+}
+
+.form-group .short-input {
+    width: 60px;
+}
+
+#collection-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Drop down recipe name on Jobs page */
+.ui-select-choices-group-label {
+    font-size: 16px;
+    background: #eee;
+    text-align: center;
+}
+
+#scrape-recipe > .dropdown-menu {
+    margin-top: 0;
+}
+
+/* Drop down recipe name on Jobs page */
+
+#dialogMessage{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.dialog-main-text{
+    font-size: 18px;
+    font-weight: bold;
+}

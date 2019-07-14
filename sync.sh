@@ -1,10 +1,12 @@
 #!/bin/bash
 
+cd /home/evan/
+
 cp ~/.vimrc ~/vimrc/.vimrc
 cp ~/.bash_aliases ~/vimrc/.bash_aliases
 cp ~/.bashrc ~/vimrc/.bashrc
 cp ~/.gitconfig ~/vimrc/.gitconfig
-cp -R ~/.config ~/.config
+cp -R ~/.config ~/vimrc/.config
 cp -R ~/.emulationstation ~/vimrc/.emulationstation
 cp ~/sync.sh ~/vimrc/sync.sh
 

@@ -1,0 +1,144 @@
+<!-- BEGIN PAGE HEADER-->
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="#/home">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#/collections">Data Collections</a>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN PAGE CONTENT-->
+<div class="row collections-frame" data-ng-controller="CollectionListController as collections">
+    <div class="col-md-12">
+        <!-- BEGIN TODO SIDEBAR -->
+        <div class="todo-ui">
+            <div class="todo-sidebar">
+                <div class="portlet light">
+                    <div class="portlet-title">
+                        <div class="caption" data-toggle="collapse" data-target=".todo-project-list-content">
+                            <span class="caption-subject font-green bold uppercase">Data Collections</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body todo-project-list-content">
+                        <a class="btn btn-default btn-xs" data-ng-click="collections.refreshList()">
+                            <i class='fa fa-refresh'> Refresh</i>
+                        </a>
+                        <a class="btn btn-default btn-xs pull-right" data-ng-click="collections.deleteAll()">
+                            <i class='fa fa-trash-o'></i> Delete All
+                        </a>
+                        <br>
+                        <br>
+                        <div class="todo-project-list">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li data-ng-repeat="name in collections.collectionNames"
+                                    data-ng-click="collections.select(name.fullName)">
+                                    <a href="#" tooltip="{{name.shortName}}">
+                                        <i class='fa fa-file'></i> <span class="badge badge-default"></span>
+                                        {{name.shortName}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TODO SIDEBAR -->
+
+            <!-- BEGIN TODO CONTENT -->
+            <div class="todo-content" data-ng-controller="TabsController as tab">
+                <div class="portlet light">
+                    <h5 class="alert alert-info"> <strong>Please note:</strong> The data in these collections is
+                        stored on your local machine in
+                        ( <img src="{{settings.layoutPath}}/img/mining19.png"/> <strong>Data Miner</strong> extension ).
+                        If you delete a collection there is no way to recover it.</h5>
+
+                    <!-- PROJECT HEAD -->
+                    <div class="portlet-title">
+                        <div class="caption" ng-show="showGrid">
+                            <button class="btn btn-sm btn-default margin-r-md"
+                                    data-ng-click="collections.delete(tab.name)">
+                                <i class='fa fa-trash-o fa-lg'></i> Delete
+                            </button>
+                            <button class="btn btn-sm btn-primary margin-r-md"
+                                    data-ng-click="collections.downloadCSV(tab.name, $event)">
+                                <i class='fa fa-download fa-lg'></i> CSV
+                            </button>
+                            <button class="btn btn-sm btn-primary margin-r-md"
+                                    data-ng-click="collections.downloadXLSX(tab.name, $event)">
+                                <i class='fa fa-download fa-lg'></i> XLS
+                            </button>
+                            <span class="text-danger">{{collections.message}}</span>
+                        </div>
+                        <div id="grid-buttons" ng-show="showGrid">
+                            <i class="icon-bar-chart font-green hide"></i>
+                            <span class="caption-helper pull-right margin-t-sm">( {{tab.rows.length}} rows )</span>
+                            <span class="caption-subject font-green margin-t-sm margin-r-md pull-right">{{tab.name}}</span>
+                        </div>
+                    </div>
+                    <!-- end PROJECT HEAD -->
+                    <div class="portlet-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div ng-show="!showGrid">
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            <h3>Import Data into a Collection</h3>
+                                            <label class="btn btn-primary btn-sm" for="csv-file">
+                                                <input id="csv-file" type="file" style="display:none;">
+                                                <i class="fa fa-plus fa-lg"></i> Import a CSV
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <br>
+                                            Import a CSV file into a collection. Please note that the input CSV files must have
+                                            a header row (column name row).
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            <h3>Create a new collection from Template</h3>
+                                            <label class="btn btn-primary btn-sm" for="collection-from-template">
+                                                <input id="collection-from-template" type="file" style="display:none;">
+                                                <i class="fa fa-plus fa-lg"></i> Import Template
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <br>
+                                            Create a set of urls to scrape using a template file. Using a template file you
+                                            provide the values to be stuffed into a template URL to create a set of unique
+                                            urls to be scraped.
+                                            Here is an <a href="../assets/data/template_example.csv">
+                                            example template file</a> which you can download and modify.
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="grid-container" ng-if="showGrid" ng-style="{height: collections.gridHeight + 'px'}">
+                                    <div id="collection-grid" ui-grid="gridOptions" class="grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TODO CONTENT -->
+        </div>
+    </div>
+    <!-- END PAGE CONTENT-->
+</div>
+<!-- END PAGE CONTENT-->
+<script>
+    //    AppTodo2.init(); // init todo page
+</script>

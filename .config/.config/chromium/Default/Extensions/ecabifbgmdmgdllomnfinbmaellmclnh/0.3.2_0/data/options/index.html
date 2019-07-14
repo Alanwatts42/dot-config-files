@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reader View :: Options</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: "Helvetica Neue",Helvetica,sans-serif;
+      font-size: 13px;
+      padding: 10px;
+      min-width: 500px;
+    }
+    textarea {
+      width: 100%;
+      font-family: monospace;
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 5px;
+    }
+    th {
+      text-align: left;
+      font-weight: 500;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+  <table width=100%>
+    <colgroup>
+      <col width=32>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th colspan="3">UI Customization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="printing-button"></td>
+        <td><label for="printing-button">Show "printing button" in the reader view</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="save-button"></td>
+        <td><label for="save-button">Show "save button" in the reader view</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="fullscreen-button"></td>
+        <td><label for="fullscreen-button">Show "fullscreen button" in the reader view</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="speech-button"></td>
+        <td><label for="speech-button">Show "speech button" in the reader view</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="images-button"></td>
+        <td><label for="images-button">Show "toggle images button" in the reader view</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="navigate-buttons"></td>
+        <td><label for="navigate-buttons">Show "navigation buttons" in the reader view</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="context-open-in-reader-view"></td>
+        <td><label for="context-open-in-reader-view">Show "Open in Reader View" context-menu item (restart required) (requires chrome.tabs permission)</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="context-open-in-reader-view-bg"></td>
+        <td><label for="context-open-in-reader-view-bg">Show "Open in background Reader View" context-menu item (restart required) (requires chrome.tabs permission)</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="context-switch-to-reader-view"></td>
+        <td><label for="context-switch-to-reader-view">Show "Switch to Reader View" context-menu item (restart required)</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="auto-fullscreen"></td>
+        <td><label for="auto-fullscreen">Automatically switch to the fullscreen mode</label></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th colspan="3"><a id="ref" href="#">Custom styling</a> (reader view):</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <textarea placeholder="User styles for the actual reader-view" id="user-css" rows="15"></textarea>
+        </td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th colspan="3"><a id="ref" href="#">Custom styling</a> (top frame and sidebar):</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <textarea placeholder="User styles for top frame (sidebar mainly)" id="top-style" rows="4"></textarea>
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+    <thead>
+      <tr>
+        <th colspan="3">Link Opening</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="new-tab"></td>
+        <td><label for="new-tab">Open links in new tabs</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="reader-mode"></td>
+        <td><label for="reader-mode">Open links in the reader view mode</label></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th colspan="3">Misc</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="faqs"></td>
+        <td><label for="faqs"> Open FAQs page on updates</label></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    Rate "<b><a id="rate" href="https://chrome.google.com/webstore/detail/reader-view/ecabifbgmdmgdllomnfinbmaellmclnh/reviews" style="text-decoration: none">Reader View</a></b>" extension
+  </p>
+  <div id="explore" data-inc=50></div>
+  <p>
+    <button id="support">Support Development</button>
+    <button id="reload">Restart</button>
+    <button id="reset">Reset</button> - <button id="save">Save</button>
+    <span id="status"></span>
+  </p>
+
+  <script src="/config.js"></script>
+  <script src="index.js"></script>
+  <script async src="matched.js"></script>
+</body>
+</html>

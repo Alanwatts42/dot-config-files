@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "dm-extension";
+  src:url("../fonts/dm-extension.eot");
+  src:url("../fonts/dm-extension.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/dm-extension.woff") format("woff"),
+  url("../fonts/dm-extension.ttf") format("truetype"),
+  url("../fonts/dm-extension.svg#dm-extension") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "dm-extension" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "dm-extension" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-refresh:before {
+  content: "\61";
+}
+.icon-repeat:before {
+  content: "\62";
+}
+.icon-floppy-o:before {
+  content: "\63";
+}
+.icon-download:before {
+  content: "\64";
+}
+.icon-files-o:before {
+  content: "\65";
+}
+.icon-file-o:before {
+  content: "\66";
+}
+.icon-file-text-o:before {
+  content: "\67";
+}
+.icon-asterisk:before {
+  content: "\68";
+}
+.icon-circle-o:before {
+  content: "\69";
+}
+.icon-circle:before {
+  content: "\6a";
+}
+.icon-database:before {
+  content: "\6b";
+}
+.icon-play:before {
+  content: "\6c";
+}
+.icon-align-left:before {
+  content: "\6d";
+}
+.icon-plus-square-o:before {
+  content: "\6e";
+}
+.icon-question-circle:before {
+  content: "\6f";
+}
+.icon-angle-double-down:before {
+  content: "\71";
+}
+.icon-folder-o:before {
+  content: "\72";
+}
+.icon-list-alt:before {
+  content: "\74";
+}
+.icon-page-export-doc:before {
+  content: "\75";
+}
+.icon-video-camera:before {
+  content: "\73";
+}
+.icon-info-circle:before {
+  content: "\70";
+}
+.icon-checklist:before {
+  content: "\77";
+}
+.icon-check-square:before {
+  content: "\78";
+}
+.icon-lock:before {
+  content: "\79";
+}
+.icon-heart:before {
+  content: "\7a";
+}
+.icon-lock-1:before {
+  content: "\41";
+}
+.icon-bars:before {
+  content: "\43";
+}
+.icon-server:before {
+  content: "\44";
+}
+.icon-tasks:before {
+  content: "\45";
+}
+.icon-cog:before {
+  content: "\46";
+}
+.icon-progress-0:before {
+  content: "\47";
+}
+.icon-progress-1:before {
+  content: "\48";
+}
+.icon-progress-2:before {
+  content: "\49";
+}
+.icon-progress-3:before {
+  content: "\4a";
+}
+.icon-connection-0:before {
+  content: "\4b";
+}
+.icon-thumbs-down:before {
+  content: "\76";
+}
+.icon-thumbs-o-down:before {
+  content: "\50";
+}
+.icon-thumbs-o-up:before {
+  content: "\51";
+}
+.icon-thumbs-up:before {
+  content: "\52";
+}
+.icon-exclamation-circle:before {
+  content: "\53";
+}
+.icon-ban:before {
+  content: "\54";
+}
+.icon-star:before {
+  content: "\4c";
+}
+.icon-star-half:before {
+  content: "\4d";
+}
+.icon-star-half-o:before {
+  content: "\4e";
+}
+.icon-star-o:before {
+  content: "\4f";
+}
+.icon-windows:before {
+  content: "\5a";
+}
+.icon-page-multiple:before {
+  content: "\30";
+}
+.icon-help-circled:before {
+  content: "\31";
+}
+.icon-info:before {
+  content: "\32";
+}
+.icon-check-square-o:before {
+  content: "\42";
+}
+.icon-book:before {
+  content: "\33";
+}
+.icon-book-open:before {
+  content: "\34";
+}
+.icon-database-streamline:before {
+  content: "\35";
+}
+.icon-table:before {
+  content: "\36";
+}
+.icon-home-house-streamline:before {
+  content: "\37";
+}
+.icon-home:before {
+  content: "\38";
+}
+.icon-arrow-circle-down:before {
+  content: "\55";
+}
+.icon-cloud-upload:before {
+  content: "\56";
+}
+.icon-cloud-download:before {
+  content: "\57";
+}
+.icon-cloud:before {
+  content: "\58";
+}
+.icon-medkit:before {
+  content: "\59";
+}
+.icon-download-1:before {
+  content: "\39";
+}
+.icon-data:before {
+  content: "\21";
+}
+.icon-cube:before {
+  content: "\22";
+}
+.icon-cubes:before {
+  content: "\23";
+}
+.icon-list:before {
+  content: "\24";
+}
+.icon-sign-in:before {
+  content: "\25";
+}
+.icon-sign-out:before {
+  content: "\26";
+}
+.icon-user:before {
+  content: "\27";
+}
+.icon-user-times:before {
+  content: "\28";
+}
+.icon-enter:before {
+  content: "\29";
+}
+.icon-upload:before {
+  content: "\2a";
+}

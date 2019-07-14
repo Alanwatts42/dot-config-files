@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Miner - Data Collections</title>
+
+    <link rel="stylesheet" href="css/dm_options.css">
+
+    <script src="js/dm_options.js"></script>
+
+</head>
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"-->
+            <!--aria-controls="navbar">-->
+            <!--<span class="sr-only">Toggle navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <a class="navbar-brand" href="https://data-miner.io"><img class="logo" src="img/logo.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="options.html"><i class="fa fa-database fa-lg"></i> Collections</a></li>
+                <li><a href="jobs.html"><i class="fa fa-cogs fa-lg"></i> Jobs </a></li>
+                <li><a href="https://data-miner.io"><i class="fa fa-external-link fa-lg"></i> Data Miner Home </a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-2">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="text-center">
+                        <span id="options-reload-button" class="btn btn-default btn-xs">
+                            <i class="fa fa-refresh fa-lg"></i>&nbsp; Reload
+                        </span>
+                        <span id="options-delete-all-button" class="btn btn-default btn-xs">
+                            <i class="fa fa-trash-o fa-lg"></i>&nbsp; Delete All
+                        </span>
+                        <span id="loading"></span>
+                        <br>
+                        <br>
+                        <div>Create a new Collection</div>
+                        <label class="btn btn-primary btn-sm" for="csv-file">
+                            <input id="csv-file" type="file" style="display:none;">
+                            From CSV
+                        </label>
+                        <label class="btn btn-primary btn-sm" for="collection-from-template">
+                            <input id="collection-from-template" type="file" style="display:none;">
+                            From Template
+                        </label>
+
+                    </div>
+                    <br>
+                    Input files must have a header row (column name row)
+
+                </div>
+                <div id="collection-items" class="panel-body">
+                    <div id="datasets"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>FAQs:</strong>
+                   <span class="pull-right">
+                        <a href="mailto:support@dataminer.zendesk.com"><i class="fa fa-lg fa-bug"></i> Report Bugs</a>
+                   </span>
+                </div>
+                <div class="panel-body">
+                    <h4>What are Collections?</h4>
+
+                    <p>
+                        Data that you scrape is saved for you into collections.
+                        You can View, <span class="text-nowrap">(<i class='fa fa-download fa-lg'></i> Download)</span>
+                        or <span class="text-nowrap">(<i class='fa fa-remove fa-lg'></i> Delete)</span>
+                        a collection.
+                    </p>
+
+                    <hr>
+                    <h4>How to scrape a list of URLs?</h4>
+
+                    <p>
+                        Data Miner can open a list of URLs you provide in a CSV file and scrape each and store the data
+                        into a single collection. Examples:
+                        <a href="https://data-miner.io/blog/facebook-friends" target="_blank"> Facebook </a>,
+                        <a href="https://data-miner.io/blog/angelco-skills" target="_blank"> AngelList </a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 well">
+
+                    <table id="data-table"></table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- /container -->
+
+</body>
+</html>

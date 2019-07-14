@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="208px" height="405px" version="1.1" style="background-color: rgb(255, 255, 255);">
+    <defs>
+        <style type="text/css"><![CDATA[
+			.diagramColor{
+                fill: #ffffff;
+                -webkit-transition:fill 0.3s linear;
+            }
+
+            .diagramColorSelected{
+                fill: #FFA108;
+            }
+		]]></style>
+    </defs>
+    <g transform="translate(0.5,0.5)">
+        <ellipse id="svg-start" cx="89" cy="23" rx="35.21367521367521" ry="20.54131054131054" class="diagramColor" stroke="#000000" stroke-width="3.52"
+                 transform="rotate(180,89.21,22.89)" pointer-events="none"/>
+        <g transform="translate(75.5,15.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="45" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 45px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Start</div>
+                    </div>
+                </foreignObject>
+                <text x="23" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Start</text>
+            </switch>
+        </g>
+        <ellipse id="svg-end" cx="89" cy="378" rx="35.21367521367521" ry="23.475783475783473" class="diagramColor" stroke="#000000" stroke-width="3.52"
+                 pointer-events="none"/>
+        <g transform="translate(77.5,370.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="37" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 39px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">End</div>
+                    </div>
+                </foreignObject>
+                <text x="19" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">End</text>
+            </switch>
+        </g>
+        <rect id="svg-readInput" x="53.99" y="61.04" width="70.43" height="35.21" rx="5.28" ry="5.28" class="diagramColor" stroke="#000000" stroke-width="3.52"
+              pointer-events="none"/>
+        <g transform="translate(58.5,71.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="101" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 103px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Get Param
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="51" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Get Param</text>
+            </switch>
+        </g>
+        <rect id="svg-post" x="106.81" y="131.46" width="70.43" height="35.21" rx="5.28" ry="5.28" class="diagramColor" stroke="#000000" stroke-width="3.52"
+              pointer-events="none"/>
+        <g transform="translate(128.5,141.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="43" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 43px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Post</div>
+                    </div>
+                </foreignObject>
+                <text x="22" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Post</text>
+            </switch>
+        </g>
+        <path d="M 89.21 231.24 L 89.21 242.97 L 89.21 231.24 L 89.21 242.46" fill="none" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 89.21 248.19 L 85.39 240.56 L 89.21 242.46 L 93.02 240.56 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <rect id="svg-scrape" x="53.99" y="196.02" width="70.43" height="35.21" rx="5.28" ry="5.28" class="diagramColor" stroke="#000000" stroke-width="3.52"
+              pointer-events="none"/>
+        <g transform="translate(68.5,206.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="67" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 67px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Scrape
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="34" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Scrape</text>
+            </switch>
+        </g>
+        <path d="M 89.21 284.06 L 89.21 295.79 L 89.21 284.06 L 89.21 295.29" fill="none" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 89.21 301.01 L 85.39 293.38 L 89.21 295.29 L 93.02 293.38 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <rect id="svg-storeData" x="53.99" y="248.84" width="70.43" height="35.21" rx="5.28" ry="5.28" class="diagramColor" stroke="#000000" stroke-width="3.52"
+              pointer-events="none"/>
+        <g transform="translate(58.5,258.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="101" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 101px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Store
+                            Data
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="51" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Store Data</text>
+            </switch>
+        </g>
+        <rect id="svg-nextPage" x="53.99" y="301.66" width="70.43" height="35.21" rx="5.28" ry="5.28" class="diagramColor" stroke="#000000" stroke-width="3.52"
+              pointer-events="none"/>
+        <g transform="translate(59.5,311.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="99" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 99px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Next Page
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="50" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Next Page</text>
+            </switch>
+        </g>
+        <path d="M 124.42 319.27 Q 206.59 319.27 206.59 198.96 Q 206.59 78.64 130.8 78.64" fill="none" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 125.08 78.64 L 132.71 74.83 L 130.8 78.64 L 132.71 82.46 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <rect id="svg-get" x="7.04" y="131.46" width="70.43" height="35.21" rx="5.28" ry="5.28" class="diagramColor" stroke="#000000" stroke-width="3.52"
+              pointer-events="none"/>
+        <g transform="translate(31.5,141.5)scale(0.5868945868945868)">
+            <switch>
+                <foreignObject style="overflow:visible;" pointer-events="all" width="33" height="23"
+                               requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml"
+                         style="display: inline-block; font-size: 21px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 35px; white-space: nowrap; word-wrap: normal; text-align: center;">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Get</div>
+                    </div>
+                </foreignObject>
+                <text x="17" y="22" fill="#000000" text-anchor="middle" font-size="21px" font-family="Helvetica">Get</text>
+            </switch>
+        </g>
+        <path d="M 42.26 166.68 L 42.26 175.48 Q 42.26 181.35 48.13 181.35 L 83.34 181.35 Q 89.21 181.35 89.21 185.5 L 89.21 189.64" fill="none"
+              stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 89.21 195.37 L 85.39 187.74 L 89.21 189.64 L 93.02 187.74 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 142.03 166.68 L 142.03 175.48 Q 142.03 181.35 136.16 181.35 L 95.08 181.35 Q 89.21 181.35 89.21 185.5 L 89.21 189.64" fill="none"
+              stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 89.21 195.37 L 85.39 187.74 L 89.21 189.64 L 93.02 187.74 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 89.21 96.25 L 89.21 102.12 Q 89.21 107.99 95.08 107.99 L 136.16 107.99 Q 142.03 107.99 142.03 113.86 L 142.03 125.09" fill="none"
+              stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 142.03 130.81 L 138.21 123.18 L 142.03 125.09 L 145.84 123.18 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 89.21 96.25 L 89.21 102.12 Q 89.21 107.99 83.34 107.99 L 48.13 107.99 Q 42.26 107.99 42.26 113.86 L 42.26 125.09" fill="none"
+              stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 42.26 130.81 L 38.44 123.18 L 42.26 125.09 L 46.07 123.18 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 89.21 43.43 L 89.21 54.66" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 89.21 60.38 L 85.39 52.75 L 89.21 54.66 L 93.02 52.75 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 89.21 336.88 L 89.21 348.11" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 89.21 353.83 L 85.39 346.2 L 89.21 348.11 L 93.02 346.2 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 53.99 319.27 Q 1.17 319.27 1.17 266.45 Q 1.17 213.63 47.62 213.63" fill="none" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+        <path d="M 53.34 213.63 L 45.71 217.44 L 47.62 213.63 L 45.71 209.81 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10"
+              pointer-events="none"/>
+    </g>
+</svg>

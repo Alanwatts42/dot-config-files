@@ -1,0 +1,16 @@
+[*]
+wallpaper_mode=crop
+wallpaper_common=1
+wallpapers_configured=1
+wallpaper0=/usr/share/lubuntu/wallpapers/lubuntu-default-wallpaper.png
+wallpaper=/home/evan/Downloads/8cb1e31e4f01885842c2db0b50e36821-a8ff80d6d6aefeb6073a2f5ef38038c600c11609/linux_retro_gaming.md
+desktop_bg=#2e4060
+desktop_fg=#f2f1f0
+desktop_shadow=#080808
+desktop_font=Liberation Mono 10
+show_wm_menu=0
+sort=mtime;ascending;
+show_documents=1
+show_trash=1
+show_mounts=1
+

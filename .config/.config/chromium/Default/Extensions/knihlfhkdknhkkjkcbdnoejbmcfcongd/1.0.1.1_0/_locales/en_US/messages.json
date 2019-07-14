@@ -1,0 +1,8 @@
+{
+   "ext_description": {
+      "message": "Connect to WebDAV server in your browser directly. Display folders, files, rename, delete, download, upload from Google Drive..."
+   },
+   "ext_name": {
+      "message": "WebDAV Client With Drive"
+   }
+}

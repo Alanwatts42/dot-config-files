@@ -1,0 +1,22 @@
+{
+   "api_console_project_id": "506097310605",
+   "app": {
+      "launch": {
+         "container": "tab",
+         "web_url": "https://appzend.herokuapp.com/webdavclient/"
+      },
+      "urls": [ "https://appzend.herokuapp.com/webdavclient/" ]
+   },
+   "container": "GOOGLE_DRIVE",
+   "default_locale": "en_US",
+   "description": "__MSG_ext_description__",
+   "icons": {
+      "128": "icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnG+6YyJDNhnAdTPeg+D/iYE8e8vYBH/fDOl3ZEBdGUU6r92ST3YWl6IMIGWzBZWUjHN24bvR5ZksFP9FIjCl45coJsQ3mFf4XWD1v7a9X5doJWAWTG3x1iJ/atrniU/T6YetMBCYV3MOmKxDwbllF7q9cP/OOdJvjai9XqIoW8Px5w/IXRkvW/zkgij7OMX+Xma2R7Eh0Bpc9FnNcgWFD+AdOfJZs0KLlxqt9MlregTdQigCjulw1R+s8MyxMEHo//Tvufz7YORAUAQk+ZRmG/SzfFRj+YVSkUUzSeo4W6cMm8+sLnsm8uPQyR8dOuL5rrWaISsS+n5xXe1Y3y7y4wIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_ext_name__",
+   "permissions": [ "unlimitedStorage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.1.1"
+}

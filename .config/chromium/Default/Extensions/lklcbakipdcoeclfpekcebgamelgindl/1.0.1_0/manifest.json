@@ -1,0 +1,44 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon38.png",
+      "default_popup": "/browser_action/browser_action.html",
+      "default_title": "Listen to songs and albums by your favorite musicians, create playlists and discover new and exciting music."
+   },
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "http://www.getmedia.online/favicon.ico",
+         "image_url": "http://search.searchmedia.online/search/?category=images&s=b8ds&vert=music&q={searchTerms}",
+         "is_default": true,
+         "keyword": "Music Browsing",
+         "name": "Music Browsing",
+         "search_url": "http://search.searchmedia.online/search/?category=web&s=b8ds&vert=music&q={searchTerms}",
+         "suggest_url": "http://sug.searchmedia.online/search/index_sg.php?q={searchTerms}"
+      }
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Listen to songs and albums by your favorite musicians, create playlists and discover new and exciting music.",
+   "externally_connectable": {
+      "matches": [ "*://*.getmedia.online/*" ]
+   },
+   "homepage_url": "http://www.getmedia.online/music/",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhK7fMcw10c/DuFw7XVoq3AJp8syvXTjs5oX68S43gd2+KjpzD2kel5FgOo282hwWjUds+VvwTNhtZMWaUxzzvnsSzB5J3/OKoT7Oe+v4sJBj1SrckQAX2PAiQHnMatIljU1wQ8nyF6I1Cu2Uzgx+TD65wtOzyqLdZbBIvWzK9ggDdaGp+I9V5v5bDLMEAhj4Q0FFCJtkR7m/X7lOQ/lozW4LRbKoZDg4DxlzbsiW+c3eKA0ax+mBOhLAdnN7GAFDpmmDQW/qoalDMGLbk56BoMduWN99C+1vvR7hr+Sooy+VVxLa41HuImKgGuGOJ3qoDKLDCB0jCNnR46br7cqHAwIDAQAB",
+   "manifest_version": 2,
+   "name": "Music Browsing",
+   "omnibox": {
+      "keyword": "music"
+   },
+   "permissions": [ "http://*/*", "https://*/*", "storage", "cookies", "tabs", "contextMenus", "notifications", "alarms" ],
+   "short_name": "Music Browsing",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "*" ]
+}

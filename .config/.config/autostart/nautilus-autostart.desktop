@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Files
+Exec=nautilus-desktop
+OnlyShowIn=GNOME;Unity;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;LXDE;
+AutostartCondition=GSettings org.gnome.desktop.background show-desktop-icons
+NoDisplay=true
+X-Ubuntu-Gettext-Domain=nautilus

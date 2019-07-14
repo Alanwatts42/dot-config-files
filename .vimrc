@@ -37,6 +37,17 @@ else
   endif
 endif
 
+
+" tmux color issue fix
+if &term =~# '256color' && ( &term =~# '^screen'  || &term =~# '^tmux'  )
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+" <https://vi.stackexchange.com/questions/10708/no-syntax-highlighting-in-tmux>
+
+
+
 """ ===Plugins===
 
 """ Formula to add a plugin = Plug 'foo/bar' (in single quotes)
@@ -57,7 +68,7 @@ call plug#begin(bundle)
 
 """ ==Development Environment and Enhancements==
 Plug 'vim-syntastic/syntastic' " A linter, many options, much correct.
-Plug 'klen/rope-vim' " Use <leader>+j for docs lookup on selected code
+Plug 'python-rope/ropevim' " leader+j=lookup docs on selected code
 Plug 'tpope/vim-surround'  " easy manipulation of surround chars
 Plug 'tomtom/tcomment_vim' " use gcc to comment/uncomment text under cursor
 Plug 'tpope/vim-commentary'  " tpope doesn't write docs, docs write themselves out of fear.
@@ -132,14 +143,13 @@ if has("autocmd")
   augroup END
 endif
 
-
+" ===========================
 " ==Useful General Settings==
-
+" ===========================
 " Settings that will apply to all filetypes. Any filetype-specific
 " configurations (*.vim files inside the .vim/ftplugin directory)
 " would have these settings as a foundation, and there shouldn't be
 " many filetypes (if any) that require any of these to be turned off
-
 
 set title               " window title
 set vb t_vb=            " disable beep and flashing
@@ -167,9 +177,9 @@ set mouse=a                      " disable mouse
 set encoding=utf-8
 set number
 
-
+" ----------------------
 " -Keyboard-Cartography-
-
+" ----------------------
 " <leader> key mapping. I typically use comma or ','
 let g:mapleader=','
 
@@ -179,7 +189,14 @@ noremap <Leader>vs :source $HOME/.vimrc<CR>
 
 """ -Clipboard-
 " Fixing Vim's clipboard (as much as possible)
-vnoremap <Leader>y "*y
+" X11 keyboard fix - <Leader>y, p, Y, P = copy, paste to/from X11 clipboard
+" Same modification should also work the same way on Win32/MacOS
+" src='https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim'
+nnoremap <Leader>y "*y
+nnoremap <Leader>p "*p
+nnoremap <Leader>Y "+y
+nnoremap <Leader>P "+p
+" Y (capital) now yanks from cursor position to end of current line 
 noremap Y y$
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -211,6 +228,8 @@ nnoremap <Leader>rnn :set relativenumber!<CR>
 " Run python code in current file with F9
 nnoremap <F9> :w<cr>:!python %<cr>
 
+" Set pymode to use python3 and not 'python' aka python2
+let g:pymode_python = 'python3'
 
 " --Screen-Splitting--
 " :sp <path to file you want to split screen with (vertically)
@@ -237,6 +256,10 @@ set linebreak                   " don't cut words on wrap
 set listchars=tab:>\            " > to highlight <Tab>
 set nolist                        " displaying listchars
 set ww=<,>,h,l  " ww = commands allowed to 'wrap' around EOL
+
+" Text-folding setting
+set foldmethod=marker
+set foldopen=hor
 
 " Sounds & Other Peripheral Functions
 set noeb  " Attempt to silence error dings for console vim

@@ -19,6 +19,9 @@ alias apt-up="sudo apt update && sudo apt upgrade"
 alias apt-in="sudo apt install"
 alias aptsearch="sudo apt search"
 
+# Sets screen brightness for monitor i.e. backlight (number between 0 and 1)
+alias xbacklight="xrandr --output eDP-1 --brightness"
+
 
 # Wifi operations via the terminal - very long, very specific, aliases therefore very necessary
 alias wifi-go="sudo nmcli dev wifi connect"

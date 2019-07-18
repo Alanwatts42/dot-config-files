@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+
+# Expand aliases for use in other shells like zsh
+shopt -s expand_aliases
+
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

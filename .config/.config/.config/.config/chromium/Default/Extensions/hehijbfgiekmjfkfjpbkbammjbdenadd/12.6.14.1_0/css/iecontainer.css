@@ -1,0 +1,235 @@
+
+.fadein {
+    -webkit-animation: fadein 4.5s; /* Safari, Chrome and Opera > 12.1 */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+li h4 {
+    margin-bottom:5px;
+}
+
+.input-label {
+    display:inline-block;
+    margin-left:10px;
+}
+
+#helper-disconnected {
+    text-align:center;
+    font-size:20px;
+    margin-top:40px;
+}
+
+#reg-reminder2 button {
+    font-size:16px;
+}
+
+.reg-reminder-container {
+    font-size:16px;
+    border-style:solid;
+    border-width:3px;
+    border-color:#444488;
+    border-radius:5px;
+    display:block;
+    margin:auto;
+    width:600px;
+    font-family:arial;
+    box-shadow: 12px 12px 16px #777;
+    position:relative;
+    top:100px;
+}
+
+.reg-reminder-header {
+    background-color:#444488;
+    color:white;
+    padding:8px;
+    text-align:center;
+}
+
+.reg-reminder-buttons {
+    float:right;
+    margin-right:8px;
+}
+
+.reg-reminder-content {
+    padding:10px
+}
+
+html, body {
+    width:100%;
+    height:100%;
+}
+
+/* POPUP WINDOWS / DIALOGS */
+.dialog-container {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:rgba(127,127,127,0.75);
+    z-index: 100000;
+}
+
+.dialog-container .popup {
+    top:-10%;
+}
+.popup {
+    font-size:16px;
+    font-family:Arial;
+    display:inline-block;
+    min-width:33%;
+    border-style:solid;
+    border-radius:8px;
+    border-width:1px;
+    border-color:#0084ff;
+    background-color:white;
+    position:relative;
+}
+
+.popup-header {
+    font-size:22px;
+    padding:8px;
+    border-top-right-radius:8px;
+    border-top-left-radius:8px;
+    background-color:#2094f9;
+    color:white;
+}
+
+.popup-body {
+    padding:25px;
+}
+
+.popup-footer {
+    background-color: #f3f3f3;;
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
+    padding:8px;
+    text-align:right;
+}
+
+.popup button {
+    font-size:15px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #e2e2e2;
+    margin-left:8px;
+    border-color:transparent;
+    border-width:3px;
+}
+
+.popup .default-button {
+    background-color:#0074d9;
+    color:white;
+}
+
+.popup button:hover {
+    background-color: #0054d9;
+    cursor:pointer;
+}
+
+#connection-lost-reason {
+    margin-top:1em;
+}
+
+#intranet-url .popup {
+    max-width:50%;
+}
+
+#intranet-url a {
+    text-decoration:underline;
+    color:blue;
+}
+
+#loading-progress {
+    width:100%;
+    height:5px;
+}
+
+#feedback {
+    display: none;
+    margin: 0 8px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 3px;
+    border-color: blue;
+    border-width: 1px;
+    color: blue;
+}
+
+.hosted #feedback {
+    display: inline;
+}
+
+#compat-selector {
+    position:absolute;
+    background-color: #c4d3f1;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkgray;
+    margin: 0px;
+    top: 26px;
+    margin-left:-5px;
+    z-index:100;
+}
+#compat-selector a {
+    padding:8px;
+    display:block;
+}
+#compat-selector a:hover {
+    background-color:white;
+}
+
+#compat-selector {
+    display:none;
+}
+
+#compat-mode .show {
+    display:block;
+}
+
+#prompt-activex {
+    height:1.5em;
+    background-color:#FEFEE0;
+    color:black;
+    text-align:center;
+}
+
+#prompt-activex[active='active'], #prompt-activex[active='active'] a,
+#prompt-activex:hover, #prompt-active:hover a, #prompt-activex a:hover  {
+    color:white;
+    background-color:blue;
+}

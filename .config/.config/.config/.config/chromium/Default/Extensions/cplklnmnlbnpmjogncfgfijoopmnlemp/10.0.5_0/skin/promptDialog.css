@@ -1,0 +1,115 @@
+﻿/*
+(c) Copyright Ipswitch, Inc. - https://www.ipswitch.com
+*/
+
+/* styles for password dialog */
+
+@font-face {
+    font-family: "imicons";
+    src: url("imicons/fonts/imicons.eot");
+    src: url("imicons/fonts/imicons.eot?#iefix") format("embedded-opentype"), 
+         url("imicons/fonts/imicons.woff") format("woff"), 
+         url("imicons/fonts/imicons.ttf") format("truetype"), 
+         url("imicons/fonts/imicons.svg#imicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: verdana, geneva, arial, sans-serif;
+}
+
+/*#prompt-container {
+    display: block;
+    height: 200px;
+}
+
+#prompt-box {
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+}*/
+
+div#container.vbox {
+    display: inline-block;
+    position: fixed;
+    /*background: #414042;*/
+    border-radius: 1px;
+    width: 100%;
+    min-height: 100px;
+    z-index: 10;
+    margin: -8px;
+    margin-bottom: 0px;
+    /*height:auto;*/
+}
+
+#container > div {
+    background: #FFF;
+}
+
+#dialogboxhead {
+    background: #007B89 !important; /*#666;*/
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: ghostwhite;
+    height: 100% !important;
+    text-align: center;
+}
+
+#dialogboxbody {
+    margin-top: 15px;
+    /*margin-bottom: 5px;*/
+}
+
+#prompt-message {
+    font-size: 12px;
+    font-weight: bold;
+    background: #007B89;
+    text-align: center;
+}
+
+#prompt-input-text {
+    display: inline-block;
+    margin: 7px;
+    padding: 7px;
+    padding-right: 0px;
+    padding-left: 4px;
+    width: -webkit-fill-available;
+    height: auto;
+}
+
+#buttons {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#ok-button {
+}
+
+#ok-button:before {
+    font-family: imicons;
+    display: inline-block;
+    content: "a";
+    font-size: 16px;
+    color: ghostwhite;
+    margin-right: 10px;
+    margin-bottom: inherit;
+    vertical-align: middle;
+}
+
+#cancel-button {
+}
+
+#cancel-button:before {
+    font-family: imicons;
+    display: inline-block;
+    content: "e";
+    font-size: 16px;
+    color: ghostwhite;
+    margin-right: 10px;
+    margin-bottom: inherit;
+    vertical-align: middle;
+}

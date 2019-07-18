@@ -1,0 +1,43 @@
+{
+   "background": {
+      "page": "client/bg/index_bg.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/rc19.png",
+         "38": "img/rc38.png"
+      },
+      "default_popup": "client/dist/index.html#/popup",
+      "default_title": "Recipe Creator"
+   },
+   "content_scripts": [ {
+      "css": [ "client/dist2/css/content_xpath.css" ],
+      "js": [ "js/dm_content.js", "client/dist2/js/vendor.js", "client/dist2/js/dm_content_script.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://data-miner.io https://ssl.google-analytics.com https://www.google-analytics.com https://dj3xmmjxrdmmc.cloudfront.net; object-src 'self'",
+   "description": "Create recipes for Data Miner to extract data from any site.",
+   "externally_connectable": {
+      "matches": [ "*://*.data-miner.io/*", "*://data-miner.io/*" ]
+   },
+   "icons": {
+      "128": "img/rc128.png",
+      "16": "img/rc16.png",
+      "48": "img/rc48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnrzWHmr/LjXhq7O1CtGYcIcgTNZRjSrDemUqx7zRng1pollLVyCRfpR4xVehyNoy8eIq6LCa0E4PpmRA4iVPBmz49l0jaVNl+IEaFuKpkz7KScJJTXZm/2mD3AqStOu2bz1/0hxjLxbUU4+/Ozu3UbGLajV5bB+6M9N9J/adMuBqChNPPCPPj8XuRD9zcC10vyqPPHV84Y6kmZbe9UMyTCzaZCxeYDc5BuyZzkwFKrxz7T5SXCgT4jUYW4ljQP5hdNfHgmO9dGFl+e292b2Vtt//5lzF4PHsIoGJu+vpZBJ5CE8XSiZ6ZCnfX1bGd92pqA+bHSYDX6XMA6msfwLHEwIDAQAB",
+   "manifest_version": 2,
+   "name": "Recipe Creator",
+   "optional_permissions": [ "webRequestBlocking", "webRequest", "downloads", "pageCapture", "file://*/*" ],
+   "options_ui": {
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "admin/index.html"
+   },
+   "permissions": [ "tabs", "contextMenus", "clipboardWrite", "\u003Call_urls>", "storage", "unlimitedStorage", "pageCapture" ],
+   "short_name": "Recipe Creator",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.299.23",
+   "web_accessible_resources": [ "client/dist/index.html" ]
+}

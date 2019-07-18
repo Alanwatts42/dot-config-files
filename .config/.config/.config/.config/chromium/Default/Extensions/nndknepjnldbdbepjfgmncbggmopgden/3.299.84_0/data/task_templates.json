@@ -1,0 +1,188 @@
+{
+  "status": "200",
+  "data": [
+    {
+      "id": 1,
+      "info": {
+        "name": "Images",
+        "description": "Downloads images to your computer",
+        "image": "<i class='fa fa-cloud-download fa-lg job-template-image'></i>"
+      },
+      "type": "download.image",
+      "form_data": {
+        "form": [
+          "*"
+        ],
+        "schema": {
+          "type": "object",
+          "title": "Types",
+          "properties": {
+            "collection": {
+              "title": "Collection",
+              "type": "string",
+              "enum": []
+            },
+            "position": {
+              "title": "Column # for URLs",
+              "type": "integer"
+            },
+            "file_name": {
+              "title": "Column # for File Names",
+              "type": "integer"
+            },
+            "folder": {
+              "title": "Download Folder Name",
+              "type": "string",
+              "default": "images"
+            },
+            "max_number": {
+              "title": "Max number of items",
+              "type": "integer",
+              "default": "10"
+            },
+            "wait_time": {
+              "title": "Wait Time Between Downloads (Seconds)",
+              "type": "number",
+              "default": "1.0"
+            }
+          },
+          "required": [
+            "folder",
+            "collection",
+            "position",
+            "wait_time"
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "info": {
+        "name": "Pages",
+        "description": "Download the HTML page and save it on your computer",
+        "image": "<i class='fa fa-cloud-download fa-lg job-template-image'></i>"
+      },
+      "type": "download.page",
+      "form_data": {
+        "form": [
+          "*"
+        ],
+        "schema": {
+          "type": "object",
+          "title": "Types",
+          "properties": {
+            "collection": {
+              "placeholder": "Select a collection",
+              "title": "Collection (containing source URLs)",
+              "type": "string",
+              "enum": []
+            },
+            "position": {
+              "title": "Column # for URLs",
+              "type": "integer"
+            },
+            "file_name": {
+              "title": "Column # for File Names",
+              "type": "integer"
+            },
+            "folder": {
+              "title": "Download Folder Name",
+              "type": "string",
+              "default": "pages"
+            },
+            "max_number": {
+              "title": "Number of pages",
+              "type": "integer",
+              "default": "3"
+            },
+            "wait_time": {
+              "title": "Wait Time Between Downloads (Seconds)",
+              "type": "number",
+              "default": "3"
+            }
+          },
+          "required": [
+            "name",
+            "order",
+            "collection",
+            "position",
+            "file_name",
+            "folder"
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "info": {
+        "name": "Scrape Pages",
+        "description": "Load a URL from a collection and Scrape its content",
+        "image": "<i class='fa fa-refresh fa-lg job-template-image'></i>"
+      },
+      "type": "scrape.page",
+      "form_data": {
+        "form": [
+          "recipes",
+          "collection",
+          "position",
+          "dest_collection",
+          "max_number",
+          "wait_time",
+          "referrer_set",
+          "follow_pagination"
+        ],
+        "schema": {
+          "type": "object",
+          "title": "Types",
+          "properties": {
+            "recipes": {
+              "title": "Recipe (for page scraping)",
+              "type": "integer"
+            },
+            "collection": {
+              "placeholder": "Select a collection",
+              "title": "Collection (containing source URLs)",
+              "type": "string",
+              "enum": []
+            },
+            "position": {
+              "title": "Column # for URLs",
+              "type": "integer",
+              "default": "1"
+            },
+            "dest_collection": {
+              "title": "Destination Collection Name",
+              "type": "string"
+            },
+            "max_number": {
+              "title": "Number of pages",
+              "type": "integer",
+              "default": "10"
+            },
+            "wait_time": {
+              "title": "Wait Time Between Downloads (Seconds)",
+              "type": "number",
+              "default": "15"
+            },
+            "follow_pagination": {
+              "title": "Follow Paginated Results",
+              "type": "boolean",
+              "default": "false"
+            },
+            "referrer_set": {
+              "title": "Set Referring Page",
+              "type": "string",
+              "default": ""
+            }
+          },
+          "required": [
+            "name",
+            "order",
+            "collection",
+            "position"
+          ]
+        }
+      }
+    }
+  ]
+}

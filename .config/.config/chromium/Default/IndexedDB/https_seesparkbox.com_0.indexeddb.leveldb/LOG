@@ -1,0 +1,9 @@
+2019/07/17-22:11:33.669 f20 Reusing MANIFEST /home/evan/.config/chromium/Default/IndexedDB/https_seesparkbox.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/07/17-22:11:44.770 f21 Current memtable full; waiting...
+2019/07/17-22:11:44.770 f9c Level-0 table #5: started
+2019/07/17-22:11:44.826 f9c Level-0 table #5: 442 bytes OK
+2019/07/17-22:11:44.903 f9c Delete type=0 #3
+2019/07/17-22:11:44.904 f9c Level-0 table #7: started
+2019/07/17-22:11:44.904 f9c Level-0 table #7: 0 bytes OK
+2019/07/17-22:11:44.946 f9c Delete type=0 #4
+2019/07/17-22:11:44.946 f9c Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

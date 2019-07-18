@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jobsApp" ng-csp>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Miner - Download Files</title>
+
+    <link rel="stylesheet" href="css/dm_jobs.css">
+
+    <script src="js/dm_jobs.js"></script>
+
+</head>
+<body>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"-->
+            <!--aria-controls="navbar">-->
+            <!--<span class="sr-only">Toggle navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <a class="navbar-brand" href="https://data-miner.io"><img class="logo" src="img/logo.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="options.html"><i class="fa fa-database fa-lg"></i> Collections</a></li>
+                <li class="active"><a href="jobs.html"><i class="fa fa-cogs fa-lg"></i> Jobs </a></li>
+                <li><a href="https://data-miner.io"><i class="fa fa-external-link fa-lg"></i> Data Miner Home </a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div ng-view></div>
+
+</div>
+<!-- /container -->
+
+</body>
+</html>

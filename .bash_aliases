@@ -1,7 +1,11 @@
 # Bash aliases - examples found in /usr/share/doc/bash-doc/examples
 
-# Functions - similar to aliases, but can have things like parameters/variables
+# Expand aliases so they can be used in zsh as well, per: 
+# <https://stackoverflow.com/questions/5240755/how-to-use-aliases-defined-in-bashrc-in-other-scripts>
+# shopt -s expand_aliases
 
+
+# Functions - similar to aliases, but can have things like parameters/variables
 # Example function - "apt-grab <program> = "sudo apt-get -f install <program> --install-suggests"
 apt-grab(){
     "sudo apt-get install ${1} --install-suggests"

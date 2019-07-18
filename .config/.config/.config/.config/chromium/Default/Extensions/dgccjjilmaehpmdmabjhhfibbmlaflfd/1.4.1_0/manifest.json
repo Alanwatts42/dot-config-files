@@ -1,0 +1,28 @@
+{
+   "author": "Kelvin Hung",
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "glasses24.png",
+      "default_title": "Magic Reader"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.js", "content_script.js", "eye-test.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Adjust the font size and line spacing of the main content of a webpage automatically based on your preference.",
+   "icons": {
+      "128": "glasses128.png",
+      "16": "glasses24.png",
+      "48": "glasses48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArhT/O8Pyc2cM/UMtp1ioMtFhNNu5WdOiz8QrPDzWE8CpekL28HKbtFa9DiCeYaK0NxAi8A+OiwU46x/oEeelZ4fE9O3MfI6IQQH8gXz4+r7hwJwRB2kOzCmTxkllc1zNHe3zQjXEagCVmd5xbDlI8r5r2vPWwM6BfbG/gkb/lgXz8pYqYPGdAiRNdv41lxPmoGZltePpMUM1AyYhp8+mOjujCuxZ2jYqG9FYzEhMOUHOvtCikUfKgl77kn6HuzUDCZCXpGpVtTg5Aao04sy3o2C6lR7Aflya2vEjjMRagsq8v++jDlEvT2OwguQQf1AuCWgXX7bq7vawc5fjEVb8RwIDAQAB",
+   "manifest_version": 2,
+   "name": "Magic Reader",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "activeTab", "storage", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.4.1"
+}

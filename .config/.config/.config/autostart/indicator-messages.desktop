@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Indicator Messages
+Exec=/usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+StartupNotify=false
+Terminal=false
+OnlyShowIn=Unity;GNOME;LXDE;LXDE;LXDE;LXDE;
+NoDisplay=true
+AutostartCondition=GNOME3 unless-session gnome
+X-Ubuntu-Gettext-Domain=indicator-messages

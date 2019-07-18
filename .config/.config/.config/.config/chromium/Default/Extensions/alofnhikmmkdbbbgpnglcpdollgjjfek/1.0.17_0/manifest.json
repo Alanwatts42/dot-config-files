@@ -1,0 +1,29 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/32.png",
+      "default_popup": "popup/build/index.html",
+      "default_title": "Joplin Web Clipper"
+   },
+   "content_scripts": [ {
+      "js": [ "main.js" ],
+      "matches": [ "*://*/" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Capture and save web pages and screenshots from your browser to Joplin.",
+   "homepage_url": "https://joplinapp.org",
+   "icons": {
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "96": "icons/96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiiItHvS52c2kTXiswZ6e6Bqs81GUj1AhHFKqSz6MUL1tBucBd28cjnZ0ZfTU6zIDvC0A+f5lpvtfMVrWTDthr00m9qvHW4XjCq72H0NL1KHZ7OGJDk0l24lcyGiZmOa2pFpcU3f3k45gaHnAadEdoVD4nspf+07ygTVy1QUOnnJgfVb0hMUzxu31XtYl899zER23pW6+ABvHNoRqs/vo8Km7KvcUPPJIRuv8nIdDi6yzwkqbGDVtbA3FteIa68q9fM3L/MfjIGv8hNrb9Gb0ykZzAnd8Ne8DUCAq0wRS//oZLXu7xjbZAYRP6lQnSDwhUiy1WWCDpoBKUtm3zpg2ewIDAQAB",
+   "manifest_version": 2,
+   "name": "Joplin Web Clipper",
+   "permissions": [ "activeTab", "tabs", "http://*/", "https://*/", "\u003Call_urls>", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.17"
+}

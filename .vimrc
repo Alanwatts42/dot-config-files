@@ -291,6 +291,13 @@ set confirm                     " confirm changed files
 set noautowrite                 " never autowrite
 set nobackup                    " disable backups
 
+" Markdown auto-format text as ```code snippet``` using tpope/surround 
+autocmd FileType md let b:surround_45 = "``` \r ```"
+" to surround with ```  ``` in a markdown file, use cmd='yss-'
+" 'b:surround_45' was used becuase ascii code for '-' is '45' other
+" ascii codes can be cound with ':echo char2nr("%c")' in vim
+
+
 """ Persistent undo. Requires Vim 7.3 {{{
 if has('persistent_undo') && exists('&undodir')
     set undodir=$HOME/.vim/undo/    " where to store undofiles

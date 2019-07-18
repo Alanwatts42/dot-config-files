@@ -1,5 +1,5 @@
 {
-   "checksum": "6267e65d5cc69b120b71eaacf12e7d8f",
+   "checksum": "acb5dd0045c60a11e7326c0bae9440f0",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -2192,9 +2192,16 @@
                   "name": "Arch-Linux",
                   "sync_transaction_version": "1",
                   "type": "folder"
+               }, {
+                  "date_added": "13207892804720146",
+                  "id": "3453",
+                  "name": "Command Line Productivity with ZSH Aliases - Leapfrog",
+                  "sync_transaction_version": "17",
+                  "type": "url",
+                  "url": "https://blog.lftechnology.com/command-line-productivity-with-zsh-aliases-28b7cebfdff9"
                } ],
                "date_added": "13205954729843440",
-               "date_modified": "13205954729843440",
+               "date_modified": "13207892837097420",
                "id": "3160",
                "name": "Linux",
                "sync_transaction_version": "1",
@@ -2427,7 +2434,7 @@
             "url": "https://docs.python.org/3.5/library/functions.html#print"
          } ],
          "date_added": "13205954466072258",
-         "date_modified": "13206735034864984",
+         "date_modified": "13207892804720146",
          "id": "1",
          "name": "Bookmarks bar",
          "type": "folder"
@@ -24612,7 +24619,7 @@
          "name": "Other bookmarks",
          "type": "folder"
       },
-      "sync_transaction_version": "13",
+      "sync_transaction_version": "17",
       "synced": {
          "children": [ {
             "children": [ {

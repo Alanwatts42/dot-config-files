@@ -1,3 +1,3 @@
-2019/07/08-18:19:36.501 3ede Reusing MANIFEST leveldb/MANIFEST-000001
-2019/07/08-18:19:36.507 3ede Recovering log #27
-2019/07/08-18:19:36.536 3ede Reusing old log leveldb/000027.log 
+2019/07/17-12:27:06.284 bfb Reusing MANIFEST leveldb/MANIFEST-000001
+2019/07/17-12:27:06.285 bfb Recovering log #31
+2019/07/17-12:27:06.387 bfb Reusing old log leveldb/000031.log 

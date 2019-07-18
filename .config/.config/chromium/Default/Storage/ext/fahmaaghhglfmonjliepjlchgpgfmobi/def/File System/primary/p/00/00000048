@@ -1,0 +1,29 @@
+
+
+-------session starts-------
+
+[7-18 2:54:19.691] INFO: MediaGallery: name=/home/evan/Music, galleryId=1, isMediaDevice=false, deviceId=undefined
+[7-18 2:54:19.693] INFO: MediaGallery: name=/home/evan/Pictures, galleryId=2, isMediaDevice=false, deviceId=undefined
+[7-18 2:54:19.693] INFO: MediaGallery: name=/home/evan/Videos, galleryId=3, isMediaDevice=false, deviceId=undefined
+[7-18 2:54:19.695] INFO: Starts a quick scan on /home/evan/Music
+[7-18 2:54:19.697] INFO: Iterating over dir / from source /home/evan/Music
+[7-18 2:54:19.774] INFO: Starts a quick scan on /home/evan/Pictures
+[7-18 2:54:19.774] INFO: Iterating over dir / from source /home/evan/Pictures
+[7-18 2:54:19.775] INFO: Starts a quick scan on /home/evan/Videos
+[7-18 2:54:19.775] INFO: Iterating over dir / from source /home/evan/Videos
+[7-18 2:54:19.937] INFO: /home/evan/Music does not contain music file
+[7-18 2:54:19.939] INFO: Iterating over dir /Backgrounds from source /home/evan/Pictures
+[7-18 2:54:19.939] INFO: Iterating over dir /retroarch from source /home/evan/Videos
+[7-18 2:54:19.941] INFO: /home/evan/Pictures does not contain music file
+[7-18 2:54:20.65] INFO: lsUserAddedMusicSourceIds=null
+[7-18 2:54:20.65] INFO: lsLastTrackFailureLoggingTime=null
+[7-18 2:54:20.95] INFO: Iterating over dir /retroarch/genesis from source /home/evan/Videos
+[7-18 2:54:20.111] INFO: Iterating over dir /retroarch/pcengine from source /home/evan/Videos
+[7-18 2:54:20.113] INFO: Iterating over dir /retroarch/snes from source /home/evan/Videos
+[7-18 2:54:20.114] INFO: /home/evan/Videos does not contain music file
+[7-18 2:54:20.115] INFO: lsUserSelectedDownloadDirId=null
+[7-18 2:54:20.119] INFO: lsDefaultDownloadLocationId=null
+[7-18 2:54:20.119] INFO: Setting is already: lsAlwaysUseDefaultDownloadLocation = false
+[7-18 2:54:20.119] INFO: Setting is already: lsDefaultDownloadLocationId = null
+[7-18 2:54:20.471] INFO: Got the drag_and_drop directory
+[7-18 2:54:49.135] INFO: Network went offline, canceling delay timer.

@@ -1,0 +1,34 @@
+<div class="page-sidebar navbar-collapse collapse">
+    <!-- BEGIN SIDEBAR MENU -->
+    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" ng-class="{'page-sidebar-menu-closed': settings.layout.pageSidebarClosed}">
+
+        <li class="heading">
+            <h3 class="uppercase"></h3>
+        </li>
+        <li class="start nav-item">
+            <a href="#/home">
+                <i class="fa fa-arrow-circle-up"></i>
+                <span class="title">Import Data</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#/collections">
+                <i class="fa fa-database"></i>
+                <span class="title">Data Collections</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#/jobs">
+                <i class="fa fa-tasks"></i>
+                <span class="title">Jobs</span>
+            </a>
+        </li>
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</div>

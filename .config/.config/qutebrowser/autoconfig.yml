@@ -481,7 +481,7 @@ global:
   input.links_included_in_focus_chain: true
   input.partial_timeout: 5000
   input.rocker_gestures: false
-  input.spatial_navigation: false
+  input.spatial_navigation: true
   keyhint.blacklist: null
   keyhint.delay: 500
   keyhint.radius: 6

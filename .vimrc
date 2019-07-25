@@ -68,7 +68,7 @@ call plug#begin(bundle)
 
 """ ==Development Environment and Enhancements==
 Plug 'vim-syntastic/syntastic' " A linter, many options, much correct.
-Plug 'python-rope/ropevim' " leader+j=lookup docs on selected code
+Plug 'python-rope/ropemode'  " Updated version of 'rope-vim' py docs lookup
 Plug 'tpope/vim-surround'  " easy manipulation of surround chars
 Plug 'tomtom/tcomment_vim' " use gcc to comment/uncomment text under cursor
 Plug 'tpope/vim-commentary'  " tpope doesn't write docs, docs write themselves out of fear.

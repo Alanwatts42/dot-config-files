@@ -56,9 +56,14 @@ echo "files copied to vimrc for backup"
 cd $HOME/vimrc
 commit_message="$OPTARG" # commit message is $1 first standard input
 git add --all
-echo "files added"
+echo "committing changes to repo..."
 git commit -m "$commit_message"
-echo "pushing files to remote..."
-git push  
+if [ $? -eq 0 ]; then
+    echo "pushing files to remote..."
+    git push
+else
+    echo "commit fail, trying push"
+    git push
+fi
 
 echo "sync completed...  all your files are belong to...  well, you I suppose. Whatever, the point is that it's done, what more do you want from me?"

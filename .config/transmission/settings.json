@@ -1,6 +1,6 @@
 {
     "alt-speed-down": 50,
-    "alt-speed-enabled": false,
+    "alt-speed-enabled": true,
     "alt-speed-time-begin": 540,
     "alt-speed-time-day": 127,
     "alt-speed-time-enabled": false,
@@ -26,7 +26,7 @@
     "lpd-enabled": false,
     "main-window-height": 500,
     "main-window-is-maximized": 0,
-    "main-window-width": 603,
+    "main-window-width": 1062,
     "main-window-x": 50,
     "main-window-y": 50,
     "message-level": 2,

@@ -1,3 +1,21 @@
-2019/07/08-18:19:36.501 3ede Reusing MANIFEST leveldb/MANIFEST-000001
-2019/07/08-18:19:36.507 3ede Recovering log #27
-2019/07/08-18:19:36.536 3ede Reusing old log leveldb/000027.log 
+2019/07/17-21:54:19.550 a4b Reusing MANIFEST leveldb/MANIFEST-000001
+2019/07/17-21:54:19.596 a4b Recovering log #31
+2019/07/17-21:54:20.406 a4b Reusing old log leveldb/000031.log 
+2019/07/17-21:55:22.217 970 Level-0 table #35: started
+2019/07/17-21:55:22.281 970 Level-0 table #35: 14464 bytes OK
+2019/07/17-21:55:22.337 970 Delete type=0 #31
+2019/07/17-22:10:22.934 cf4 Level-0 table #37: started
+2019/07/17-22:10:22.978 cf4 Level-0 table #37: 16823 bytes OK
+2019/07/17-22:10:23.034 cf4 Delete type=0 #34
+2019/07/17-22:35:49.510 f21 Level-0 table #39: started
+2019/07/17-22:35:49.584 f21 Level-0 table #39: 15063 bytes OK
+2019/07/17-22:35:49.740 f21 Delete type=0 #36
+2019/07/17-22:35:49.741 cf4 Compacting 4@0 + 1@1 files
+2019/07/17-22:35:49.885 cf4 Generated table #40@0: 613 keys, 662843 bytes
+2019/07/17-22:35:49.885 cf4 Compacted 4@0 + 1@1 files => 662843 bytes
+2019/07/17-22:35:50.041 cf4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/07/17-22:35:50.042 cf4 Delete type=2 #39
+2019/07/17-22:35:50.042 cf4 Delete type=2 #32
+2019/07/17-22:35:50.042 cf4 Delete type=2 #37
+2019/07/17-22:35:50.042 cf4 Delete type=2 #35
+2019/07/17-22:35:50.042 cf4 Delete type=2 #29

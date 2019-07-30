@@ -1,3 +1,6 @@
-2019/07/08-19:13:31.554 4925 Reusing MANIFEST Session Storage/MANIFEST-000001
-2019/07/08-19:13:31.555 4925 Recovering log #3
-2019/07/08-19:13:31.556 4925 Reusing old log Session Storage/000003.log 
+2019/07/17-21:58:32.584 9c0 Reusing MANIFEST Session Storage/MANIFEST-000001
+2019/07/17-21:58:32.584 9c0 Recovering log #3
+2019/07/17-21:58:32.660 9c0 Reusing old log Session Storage/000003.log 
+2019/07/17-21:59:24.563 cf4 Level-0 table #5: started
+2019/07/17-21:59:24.614 cf4 Level-0 table #5: 19159 bytes OK
+2019/07/17-21:59:24.670 cf4 Delete type=0 #3

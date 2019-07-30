@@ -1,6 +1,39 @@
-2019/07/08-18:19:37.905 3e91 Reusing MANIFEST /home/evan/.config/chromium/Default/Extension State/MANIFEST-000001
-2019/07/08-18:19:37.905 3e91 Recovering log #190
-2019/07/08-18:19:38.444 3e91 Reusing old log /home/evan/.config/chromium/Default/Extension State/000190.log 
-2019/07/08-18:27:17.717 3fe8 Level-0 table #194: started
-2019/07/08-18:27:17.823 3fe8 Level-0 table #194: 2175628 bytes OK
-2019/07/08-18:27:17.871 3fe8 Delete type=0 #190
+2019/07/17-21:54:21.066 970 Reusing MANIFEST /home/evan/.config/chromium/Default/Extension State/MANIFEST-000001
+2019/07/17-21:54:21.066 970 Recovering log #260
+2019/07/17-21:54:21.265 970 Reusing old log /home/evan/.config/chromium/Default/Extension State/000260.log 
+2019/07/17-22:12:17.978 fa1 Level-0 table #264: started
+2019/07/17-22:12:18.097 fa1 Level-0 table #264: 2184374 bytes OK
+2019/07/17-22:12:18.143 fa1 Delete type=0 #260
+2019/07/17-22:12:18.144 fa1 Compacting 4@0 + 1@1 files
+2019/07/17-22:12:18.364 fa1 Generated table #265@0: 9 keys, 7639 bytes
+2019/07/17-22:12:18.364 fa1 Compacted 4@0 + 1@1 files => 7639 bytes
+2019/07/17-22:12:18.407 fa1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/07/17-22:12:18.407 fa1 Delete type=2 #259
+2019/07/17-22:12:18.408 fa1 Delete type=2 #261
+2019/07/17-22:12:18.409 fa1 Delete type=2 #255
+2019/07/17-22:12:18.409 fa1 Delete type=2 #257
+2019/07/17-22:12:18.410 fa1 Delete type=2 #264
+2019/07/17-22:46:26.241 fa1 Level-0 table #267: started
+2019/07/17-22:46:26.347 fa1 Level-0 table #267: 2188760 bytes OK
+2019/07/17-22:46:26.448 fa1 Delete type=0 #263
+2019/07/17-23:23:24.542 fa1 Level-0 table #269: started
+2019/07/17-23:23:24.674 fa1 Level-0 table #269: 2192467 bytes OK
+2019/07/17-23:23:24.749 fa1 Delete type=0 #266
+2019/07/18-00:29:35.605 fa1 Level-0 table #271: started
+2019/07/18-00:29:35.691 fa1 Level-0 table #271: 2163142 bytes OK
+2019/07/18-00:29:35.729 fa1 Delete type=0 #268
+2019/07/18-01:03:20.193 fa1 Level-0 table #273: started
+2019/07/18-01:03:20.308 fa1 Level-0 table #273: 2191391 bytes OK
+2019/07/18-01:03:20.356 fa1 Delete type=0 #270
+2019/07/18-01:03:20.357 fa1 Compacting 4@0 + 1@1 files
+2019/07/18-01:03:20.486 fa1 Generated table #274@0: 9 keys, 7573 bytes
+2019/07/18-01:03:20.486 fa1 Compacted 4@0 + 1@1 files => 7573 bytes
+2019/07/18-01:03:20.533 fa1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/07/18-01:03:20.533 fa1 Delete type=2 #273
+2019/07/18-01:03:20.534 fa1 Delete type=2 #269
+2019/07/18-01:03:20.534 fa1 Delete type=2 #267
+2019/07/18-01:03:20.534 fa1 Delete type=2 #271
+2019/07/18-01:03:20.535 fa1 Delete type=2 #265
+2019/07/18-01:37:06.085 fa1 Level-0 table #276: started
+2019/07/18-01:37:06.171 fa1 Level-0 table #276: 2192401 bytes OK
+2019/07/18-01:37:06.220 fa1 Delete type=0 #272

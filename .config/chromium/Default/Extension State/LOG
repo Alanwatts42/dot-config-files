@@ -1,3 +1,27 @@
-2019/07/08-19:13:34.426 4930 Reusing MANIFEST /home/evan/.config/chromium/Default/Extension State/MANIFEST-000001
-2019/07/08-19:13:34.426 4930 Recovering log #193
-2019/07/08-19:13:34.454 4930 Reusing old log /home/evan/.config/chromium/Default/Extension State/000193.log 
+2019/07/20-14:39:29.840 d0c Reusing MANIFEST /home/evan/.config/chromium/Default/Extension State/MANIFEST-000001
+2019/07/20-14:39:29.840 d0c Recovering log #275
+2019/07/20-14:39:30.384 d0c Reusing old log /home/evan/.config/chromium/Default/Extension State/000275.log 
+2019/07/20-14:51:58.109 e50 Level-0 table #279: started
+2019/07/20-14:51:58.210 e50 Level-0 table #279: 2182493 bytes OK
+2019/07/20-14:51:58.247 e50 Delete type=0 #275
+2019/07/20-15:25:38.116 e50 Level-0 table #281: started
+2019/07/20-15:25:38.214 e50 Level-0 table #281: 2188901 bytes OK
+2019/07/20-15:25:38.262 e50 Delete type=0 #278
+2019/07/20-16:00:18.111 e50 Level-0 table #283: started
+2019/07/20-16:00:18.210 e50 Level-0 table #283: 2189768 bytes OK
+2019/07/20-16:00:18.251 e50 Delete type=0 #280
+2019/07/20-16:00:18.251 e50 Compacting 4@0 + 1@1 files
+2019/07/20-16:00:18.355 e50 Generated table #284@0: 9 keys, 7571 bytes
+2019/07/20-16:00:18.355 e50 Compacted 4@0 + 1@1 files => 7571 bytes
+2019/07/20-16:00:18.394 e50 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/07/20-16:00:18.394 e50 Delete type=2 #276
+2019/07/20-16:00:18.395 e50 Delete type=2 #281
+2019/07/20-16:00:18.395 e50 Delete type=2 #274
+2019/07/20-16:00:18.395 e50 Delete type=2 #283
+2019/07/20-16:00:18.395 e50 Delete type=2 #279
+2019/07/20-16:34:18.300 e50 Level-0 table #286: started
+2019/07/20-16:34:18.391 e50 Level-0 table #286: 2193474 bytes OK
+2019/07/20-16:34:18.430 e50 Delete type=0 #282
+2019/07/20-20:24:45.715 e50 Level-0 table #288: started
+2019/07/20-20:24:45.807 e50 Level-0 table #288: 2188509 bytes OK
+2019/07/20-20:24:45.845 e50 Delete type=0 #285

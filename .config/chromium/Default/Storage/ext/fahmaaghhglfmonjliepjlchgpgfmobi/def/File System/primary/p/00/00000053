@@ -1,0 +1,34 @@
+
+
+-------session starts-------
+
+[7-21 1:24:18.141] INFO: MediaGallery: name=/home/evan/Music, galleryId=1, isMediaDevice=false, deviceId=undefined
+[7-21 1:24:18.143] INFO: MediaGallery: name=/home/evan/Pictures, galleryId=2, isMediaDevice=false, deviceId=undefined
+[7-21 1:24:18.144] INFO: MediaGallery: name=/home/evan/Videos, galleryId=3, isMediaDevice=false, deviceId=undefined
+[7-21 1:24:18.146] INFO: Starts a quick scan on /home/evan/Music
+[7-21 1:24:18.148] INFO: Iterating over dir / from source /home/evan/Music
+[7-21 1:24:18.149] INFO: Starts a quick scan on /home/evan/Pictures
+[7-21 1:24:18.150] INFO: Iterating over dir / from source /home/evan/Pictures
+[7-21 1:24:18.151] INFO: Starts a quick scan on /home/evan/Videos
+[7-21 1:24:18.152] INFO: Iterating over dir / from source /home/evan/Videos
+[7-21 1:24:18.153] INFO: Starting periodic scan.
+[7-21 1:24:18.156] INFO: /home/evan/Music does not contain music file
+[7-21 1:24:18.158] INFO: Iterating over dir /Backgrounds from source /home/evan/Pictures
+[7-21 1:24:18.159] INFO: Iterating over dir /retroarch from source /home/evan/Videos
+[7-21 1:24:18.185] INFO: /home/evan/Pictures does not contain music file
+[7-21 1:24:18.185] INFO: Iterating over dir /retroarch/genesis from source /home/evan/Videos
+[7-21 1:24:18.187] INFO: Iterating over dir /retroarch/pcengine from source /home/evan/Videos
+[7-21 1:24:18.196] INFO: Iterating over dir /retroarch/snes from source /home/evan/Videos
+[7-21 1:24:18.207] INFO: Got the drag_and_drop directory
+[7-21 1:24:18.210] INFO: /home/evan/Videos does not contain music file
+[7-21 1:24:18.220] INFO: lsUserAddedMusicSourceIds=null
+[7-21 1:24:18.223] INFO: lsLastTrackFailureLoggingTime=null
+[7-21 1:24:18.224] INFO: lsSyncMusicEnabled=null
+[7-21 1:24:18.224] INFO: lsAppActivated=false
+[7-21 1:24:18.224] INFO: lsUserSelectedDownloadDirId=null
+[7-21 1:24:18.227] INFO: lsDefaultDownloadLocationId=null
+[7-21 1:24:18.227] INFO: Setting is already: lsAlwaysUseDefaultDownloadLocation = false
+[7-21 1:24:18.227] INFO: Setting is already: lsDefaultDownloadLocationId = null
+[7-21 1:24:19.176] WARNING: Tier change detected
+[7-21 1:24:19.176] INFO: Fetched user settings from server.
+[7-21 1:24:19.182] INFO: chromeapp:E ready

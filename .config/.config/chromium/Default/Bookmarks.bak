@@ -1,5 +1,5 @@
 {
-   "checksum": "6267e65d5cc69b120b71eaacf12e7d8f",
+   "checksum": "5983a12109c65916bb483ed0fcd7f39b",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -2418,16 +2418,9 @@
             "sync_transaction_version": "10",
             "type": "url",
             "url": "https://www.reddit.com/r/Roms/comments/9umvs0/where_to_find_latest_mame_rom_set/"
-         }, {
-            "date_added": "13206735034864984",
-            "id": "3451",
-            "name": "2. Built-in Functions — Python 3.5.7 documentation",
-            "sync_transaction_version": "13",
-            "type": "url",
-            "url": "https://docs.python.org/3.5/library/functions.html#print"
          } ],
          "date_added": "13205954466072258",
-         "date_modified": "13206735034864984",
+         "date_modified": "13206044833193677",
          "id": "1",
          "name": "Bookmarks bar",
          "type": "folder"
@@ -24612,7 +24605,7 @@
          "name": "Other bookmarks",
          "type": "folder"
       },
-      "sync_transaction_version": "13",
+      "sync_transaction_version": "10",
       "synced": {
          "children": [ {
             "children": [ {

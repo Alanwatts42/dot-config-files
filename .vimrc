@@ -78,6 +78,9 @@ Plug 'FooSoft/vim-argwrap'  " Rearrange args within () using <leader><a>
 Plug 'jalvesaq/vimcmdline'  " run code on external terminal
 Plug 'Valloric/YouCompleteMe'
 
+" ==Javascript==
+Plug 'w0rp/ale'    " javascript linter
+
 
 """ ==General Functionality==
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy finder (files, mru, etc)
@@ -130,6 +133,8 @@ nmap <F6> :w<CR>:silent !chmod 755 %<CR>:silent !./% > .tmp.xyz<CR>
 " -Pipenv-Integration-
 let pipenv_venv_path = system('pipenv --venv')
 
+" ==Javascript==
+autocmd BufWritePre *.js :normal gggqG
 
 " ==File-Type Settings==
 

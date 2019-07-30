@@ -1,0 +1,329 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/iecontainer.css" type="text/css" />
+    <link rel="stylesheet" href="css/addressbar.css" type="text/css" />
+    <link rel="stylesheet" href="css/hostedstartpage.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css" type="text/css" />
+</head>
+
+<div id="idle-warning" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">Session Expiration</div>
+        </div>
+        <div class="popup-body">
+            Your session will expire in <span id="idle-expire-seconds">NN</span> seconds due to inactivity
+        </div>
+        <div class="popup-footer">
+            <button id="resume-idle-session" class="default-button">Continue Session</button>
+        </div>
+    </div>
+</div>
+
+<div id="session-timeout" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">Session Expired</div>
+        </div>
+        <div class="popup-body">
+            Your session was closed due to inactivity
+        </div>
+        <div class="popup-footer">
+            <button class="default-button reload-button">Reload</button>
+        </div>
+    </div>
+</div>
+
+<div id="connection-lost" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">Connection Lost</div>
+        </div>
+        <div class="popup-body">
+            Your network connection to the IE Tab server was lost.
+            <div id="connection-lost-reason" style="display:none">
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="default-button reload-button">Reload</button>
+        </div>
+    </div>
+</div>
+
+<div id="intranet-url" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">Local Network URL</div>
+        </div>
+        <div class="popup-body">
+            It appears you are trying to connect to a URL that is only available in your local network.<br/><br/>
+            Would you like to allow IE Tab to access your local network?<br/><br/>
+            <div style="padding-left:10px">
+                <input id="local-net-single" type="radio" name="local-net">
+                <label for="local-net-single">Enable this for <span id="local-single-url" style="font-weight:bold"></span></label><br/><br/>
+                <input id="local-net-no" type="radio" name="local-net">
+                <label for="local-net-no">Do not enable this setting</label><br/><br/>
+                <center><a href="http://www.dev.ietab.net/ie-tab-documentation#local-network-support" target="_blank">Learn more about this feature</a></center><br/><br/>
+                Note: This setting can be enabled globally or changed in the <a href="http://www.ietab.net/options" target="_blank">Options</a> page
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="default-button close-dialog-button">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="upload-message" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">File Upload Request</div>
+        </div>
+        <div class="popup-body" style="text-align:center">
+            A file upload request was received.
+            <br/><br/>
+            <input id="upload-file" type="file" style="display:none" />
+            <button id="upload-browse" class="default-button">Browse...</button>
+            <button id="upload-cancel" class="default-button">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="save-file-message" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">Save file as...</div>
+        </div>
+        <div class="popup-body">
+            <div id="save-file-prompt">
+                <span>Enter a file name&nbsp;<span><span id="save-file-ext"></span><br/>
+                <input id="save-file" type="text" style="width:100%;margin-top:8px;" />
+            </div>
+            <div id="download-prompt">
+                <span>Downloading...</span><br/>
+                <progress style="margin-top:8px;width:100%"></progress>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div style="float:left;margin-top:10px;" id="save-file-size-footer">File size: <span id="file-save-bytes"></span>&nbsp;bytes</div>
+            <button id="btn-save-file" class="default-button">&nbsp;Save&nbsp;</button>
+            <button id="btn-save-cancel" class="">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="downloading-message" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">File Download</div>
+        </div>
+        <div class="popup-body">
+            <div id="downloading-prompt">
+                <span>Downloading...</span><br/>
+                <progress style="margin-top:8px;width:100%"></progress>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button id="btn-downloading-cancel" class="">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="upload-progress" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">File Upload In Progress</div>
+        </div>
+        <div class="popup-body" style="text-align:center">
+            <img src="images/loader1.gif" />
+        </div>
+    </div>
+</div>
+
+<div id="trial-message" class="dialog-container" style="display:none">
+    <div class="popup">
+        <div class="popup-header">
+            <div class="popup-title">Limited Time Trial</div>
+        </div>
+        <div class="popup-body">
+            You are running a free trial of IE Tab.</br/><br/>
+            But if you buy early you are eligible for an <strong>Unlimited</strong> annual subscription!<br/><br/>
+
+        </div>
+        <div class="popup-footer">
+            <button id="resume-button" class="close-dialog-button" disabled>Resume in <span id="wait-time">15</span> seconds</button>
+            <a href="http://www.ietab.net/pricing" target="_blank"><button class="default-button">Upgrade Now</button></a>
+        </div>
+    </div>
+</div>
+
+
+
+<body style="margin:0px;padding:0px;overflow:hidden">
+<div id="no-address-bar-anchor" style="display:none"></div>
+<div id="address-bar">
+        <div class="vcenter">
+            <img id="ab-logo" src="images/chromeba.png" />
+            <span id="address-text">Address:</span>
+            <div id="compat-mode" style="display:none">
+                <a id="current-compat-mode" href="javascript:void(0)">
+                    <span id="compat-mode-str">
+
+                    </span><span class="down-arrow"></span>
+                </a>
+                <div id="compat-selector">
+                    <a id="IE7S" href="javascript:void(0)">IE 7</a>
+                    <a id="IE8F" href="javascript:void(0)">IE 8</a>
+                    <a id="IE9F" href="javascript:void(0)">IE 9</a>
+                    <a id="IE10F" href="javascript:void(0)">IE 10</a>
+                    <a id="IE11F" href="javascript:void(0)">IE 11</a>
+                </div>
+            </div>
+
+            <input id="address-box" type="text" spellcheck="false" />
+            <a id="go-btn-anchor" href="#"><img id="go-btn" src="images/go.png" /></a>
+
+            <a id="feedback" href="http://www.ietab.net/support?from=feedback" target="_blank">Feedback</a>
+            <a id="settings" href="http://www.ietab.net/options" target="ietaboptions" >
+                <img id="tipIETabOptions" src="images/settings16.png" title="Change Auto URLs or other IE Tab settings"/>
+            </a>
+            <a id="btn-docs" href="http://www.ietab.net/ie-tab-documentation" target="ietabdocs" style="target-new:tab">
+                <img id="tipDocs" src="images/help.png" title="Learn more about IE Tab" />
+            </a>
+            <a id="close-btn" href="#" title="Close IE Tab and open this page in Chrome">
+                <img id="tip-close" src="images/close.gif" />
+            </a>
+        </div>
+    </div>
+</div>
+<progress id="loading-progress" style="display:none"></progress>
+
+<div id="prompt-activex" style="display:none">
+    <a href="#">This website wants to install an ActiveX control, if you trust the website to install add-ons, click here...</a>
+</div>
+
+<div id="hosted-start-page" style="display:none">
+
+    <div id="url-arrow" class="arrow_box">
+        <div>Enter your URL here</div>
+    </div>
+    <div id="feedback-arrow" class="arrow_box">
+        <center><div>Something not working?<br/><br/>Let us know, maybe we can help!</div></center>
+    </div>
+    <div id="header">
+        <img src="images/chromeie128.png"></img>
+        <h2>IE Tab Start Page</h2>
+    </div>
+
+    <div id="content">
+        <table id="general-info">
+            <tr><td>IE Tab Version:</td><td id="ietab-version" style="font-weight:bold"></td></tr>
+            <tr><td>IE Compatibility Mode:</td><td style="font-weight:bold">Internet Explorer <span id="ie-version">11</span></td></tr>
+            <tr id="account-time"><td>Account time remaining:</td><td style="font-weight:bold">[<i>trial period active</i>]</td></tr>
+        </table>
+
+        <div class="start-block">
+            <h2><i class="fa fa-book" aria-hidden="true"></i>Documentation</h2>
+            <div class="start-block-content">
+                <a href="http://www.ietab.net/ie-tab-documentation" target="_blank">Getting Started with IE Tab</a><br/>
+                <a href="http://www.ietab.net/support?from=startpage" target="_blank">Feedback / Support</a><br/>
+                <a href="http://www.ietab.net/ie-tab-documentation#auto-urls" target="_blank">Complete Documentation</a><br/>
+            </div>
+        </div>
+
+        <div class="start-block">
+            <h2><i class="fa fa-cog" aria-hidden="true"></i>Settings</h2>
+            <div class="start-block-content">
+                <a href="http://www.ietab.net/options#autourls" target="_blank">Set URLs to auto-open in IE Tab</a><br/>
+                <a href="http://www.ietab.net/options#page-top" target="_blank">All settings</a><br/>
+            </div>
+        </div>
+<!--
+        <div id="start-page-block" class="start-block">
+            <h2><i class="fa fa-play" aria-hidden="true"></i>Customize the Start Page</h2>
+            <div class="start-block-content">
+                <input id="start-ietab" name="start-option" type="radio"></input><label for="start-ietab">Use the IE Tab start page</label><br/>
+                <input id="start-blank" name="start-option" type="radio"></input><label for="start-blank">Use a blank page (about:blank</label>)<br/>
+                <input id="start-url" name="start-option" type="radio"></input><label for="start-url">Open this URL: <input type="text"></input></label><br/>
+            </div>
+        </div>
+-->
+    </div>
+</div>  <!-- hosted-start-page -->
+
+<div id="display-div" style="display:none;width:100%;height:100%"></div>
+
+<div id="helper-disconnected" style="display:none">
+    :-(<br/><br/>
+    The IE Tab Helper process was closed.<br/>
+    If this was unexpected or happens repeatedly please contact us at: support@ietab.net.
+
+</div>
+
+<div id="reg-reminder-1" class="fadein" style="display:none">
+    <div class="reg-reminder-container">
+        <div class="reg-reminder-header">
+            IE Tab Trial Period Expired
+        </div>
+        <div class="reg-reminder-content">
+            <div>
+                Thanks for using IE Tab!<br/><br/>
+            </div>
+            <div>
+                We hope it is working well for you.  If you have any questions, please don't hesitate to contact us
+                at <a target="_blank" href="mailto:support@ietab.net">support@ietab.net</a>.<br/><br/>
+
+                This is just a friendly reminder that IE Tab requires a license for business use.<br/><br/>
+
+            </div>
+            Already have a license?  <a target="_blank" href="http://www.ietab.net/regkey">click here</a>
+            <div class="reg-reminder-buttons">
+                <br/><br/>To continue:&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="http://www.ietab.net/pricing?fr=buynow"><button class="buy-now">Buy Now</button></a>&nbsp;&nbsp;&nbsp;
+                <button class="remind-later">Remind Me Later</button><br/><br/>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</div>
+
+<div id="reg-reminder-gpo" class="fadein" style="display:none">
+    <div class="reg-reminder-container">
+        <div class="reg-reminder-header">
+            Action Required: IE Tab is not licensed</span>
+        </div>
+        <div class="reg-reminder-content">
+            <div>
+                Thanks for using IE Tab!<br/><br/>
+            </div>
+            <div>
+                This is a reminder that IE Tab requires a license for business use, you may need to contact your IT department to have them purchase a license.<br/><br/>
+                If you have any questions, please don't hesitate to contact us
+                at <a target="_blank" href="mailto:support@ietab.net">support@ietab.net</a>.<br/><br/>
+
+
+            </div>
+            Already have a license?  <a target="_blank" href="http://www.ietab.net/regkey">click here</a>
+            <div class="reg-reminder-buttons">
+                <br/><br/>To continue:&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="http://www.ietab.net/pricing?fr=buynow"><button class="buy-now">Buy Now</button></a>&nbsp;&nbsp;&nbsp;
+                <button class="remind-later">Remind Me Later</button><br/><br/>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/favicon/favicon.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/b64.js"></script>
+<script src="js/nathost_messaging.js"></script>
+<script src="js/remhost_messaging.js"></script>
+<script src="js/hostmessaging.js"></script>
+<script src="js/iecontainer.js"></script>
+<script src="js/addressbar.js"></script>
+
+</body>
+</html>

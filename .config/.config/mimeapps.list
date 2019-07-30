@@ -1,7 +1,7 @@
 [Default Applications]
-text/html=userapp-Firefox-S2SB5Z.desktop
-x-scheme-handler/http=userapp-Firefox-S2SB5Z.desktop
-x-scheme-handler/https=userapp-Firefox-S2SB5Z.desktop
+text/html=chromium-browser.desktop
+x-scheme-handler/http=chromium-browser.desktop
+x-scheme-handler/https=chromium-browser.desktop
 x-scheme-handler/about=chromium-browser.desktop
 x-scheme-handler/unknown=chromium-browser.desktop
 text/markdown=vim.desktop
@@ -9,30 +9,9 @@ text/plain=leafpad.desktop
 text/x-python=vim.desktop
 text/x-rpm-spec=vim.desktop
 x-scheme-handler/discord-475456035851599874=discord-475456035851599874.desktop
-application/x-7z-compressed=org.gnome.FileRoller.desktop
-x-scheme-handler/ftp=userapp-Firefox-S2SB5Z.desktop
-x-scheme-handler/chrome=userapp-Firefox-S2SB5Z.desktop
-application/x-extension-htm=userapp-Firefox-S2SB5Z.desktop
-application/x-extension-html=userapp-Firefox-S2SB5Z.desktop
-application/x-extension-shtml=userapp-Firefox-S2SB5Z.desktop
-application/xhtml+xml=userapp-Firefox-S2SB5Z.desktop
-application/x-extension-xhtml=userapp-Firefox-S2SB5Z.desktop
-application/x-extension-xht=userapp-Firefox-S2SB5Z.desktop
 
 [Added Associations]
 text/markdown=vim.desktop;
 text/plain=vim.desktop;leafpad.desktop;
 text/x-python=vim.desktop;
 text/x-rpm-spec=vim.desktop;
-application/x-7z-compressed=org.gnome.FileRoller.desktop;
-x-scheme-handler/http=userapp-Firefox-S2SB5Z.desktop;
-x-scheme-handler/https=userapp-Firefox-S2SB5Z.desktop;
-x-scheme-handler/ftp=userapp-Firefox-S2SB5Z.desktop;
-x-scheme-handler/chrome=userapp-Firefox-S2SB5Z.desktop;
-text/html=userapp-Firefox-S2SB5Z.desktop;
-application/x-extension-htm=userapp-Firefox-S2SB5Z.desktop;
-application/x-extension-html=userapp-Firefox-S2SB5Z.desktop;
-application/x-extension-shtml=userapp-Firefox-S2SB5Z.desktop;
-application/xhtml+xml=userapp-Firefox-S2SB5Z.desktop;
-application/x-extension-xhtml=userapp-Firefox-S2SB5Z.desktop;
-application/x-extension-xht=userapp-Firefox-S2SB5Z.desktop;

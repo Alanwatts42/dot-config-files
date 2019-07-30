@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=mpd
+Terminal=false
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=MPD Music Player Daemon
+Comment=start MPD as user when you log in
+NotShowIn=LXDE;

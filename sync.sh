@@ -1,5 +1,40 @@
 #!/bin/zsh -e
 
+# cli set-up with args: -h for help and -m for commit message
+# great example for simple cli (command line interface) with basic args
+usage="$(basename "$0") [-h] [-m "$1"] --a file sync utility that pushes your linux dotfiles to a github repository
+
+where:
+    -h show this help text
+    -m create commit message (default:'auto-commit by df-sync')"
+# continuous "" from `usage="` to `df-sync')"` for multi-line message
+message="auto-commit by df-sync"
+while getopts ':hm:' option; do
+    case "$option" in
+        h)  echo "$usage"
+            exit
+            ;;
+        m)  message=$OPTARG
+            ;;
+        :)  printf "missing arguent for -%s\n" "$OPTARG" >&2
+            echo "$usage" >&2
+            exit 1
+            ;;
+        \?) printf "illegal option: -%s\n" "$OPTARG" >&2
+            echo "$usage" >&2
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND - 1))
+# to use this inside a function:
+#  - use "$FUNCNAME" instead of "$(basename '$0')"
+#  - add local OPTIND OPTARG before calling `getopts`
+# reference(s): 
+# <a href="https://stackoverflow.com/questions/5474732/how-can-i-add-a-help-method-to-a-shell-script?answertab=oldest#comment26510679_5476278">
+# 1)stackoverflow-main-answer_subj=sh_script_args
+# </a>
+
 # switch to $HOME
 cd $HOME
 
@@ -19,7 +54,7 @@ echo "files copied to vimrc for backup"
 
 # starting git commit & push
 cd $HOME/vimrc
-commit_message="$1" # commit message is $1 first standard input
+commit_message="$OPTARG" # commit message is $1 first standard input
 git add --all
 echo "files added"
 git commit -m "$commit_message"

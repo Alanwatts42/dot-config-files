@@ -1,4 +1,4 @@
-#!/bin/zsh -e
+#!/bin/zsh
 
 # cli set-up with args: -h for help and -m for commit message
 # great example for simple cli (command line interface) with basic args
@@ -62,7 +62,8 @@ if [ $? -eq 0 ]; then
     echo "pushing files to remote..."
     git push
 else
-    echo "commit fail, trying push"
+    echo "commit fail, trying add, then push..."
+    git add --all
     git push
 fi
 

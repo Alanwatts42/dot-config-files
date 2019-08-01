@@ -36,8 +36,10 @@ alias mifi-go="sudo nmcli dev wifi connect MY_EX-WIFI_GOT_THE_HOUSE password amq
 alias wifi-scan="sudo nmcli dev wifi"
 
 # Pip, pipenv, and python
+alias py="python3 --user"
+alias python="python3 --user"
 alias pipinstall="sudo pip3 --user install"
-alias pipenv="python3 -m pipenv"
+alias pipenv="py -u pipenv"
 alias ppvg="python3 -m pipenv graph"
 alias ppvin="python3 -m pipenv install"
 alias ppvcheck="python3 -m pipenv check"

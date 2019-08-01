@@ -139,7 +139,7 @@ export BROWSER="qutebrowser"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Sourcing "~/.aliases" for all custom aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+if [ -f ~/vimrc/.aliases ]; then
+    . ~/vimrc/.aliases
 fi
 

@@ -124,7 +124,6 @@ export EDITOR='vim'
 # export ARCHFLAGS="-arch x86_64"
 
 # Customizing "man" a.k.a. "manual" pages
-export PAGER="vim"
 export MANWIDTH=80
 
 # Setting $BROWSER env variable to qutebrowser

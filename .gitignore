@@ -16,5 +16,9 @@
 # please note: '.*' and '/*' makes git ignore everything that isn't also listed in the gitignore with 
 # a '!' meaning 'do not' ignore.
 
-$HOME/vimrc/.zsh/.oh-my-zsh
+*.swp
+*.swo
+*.pyc
+
+$HOME/vimrc/.zsh/.oh-my-zsh/*
 

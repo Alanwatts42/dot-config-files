@@ -3,7 +3,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/evan/.zsh/.oh-my-zsh"
+export ZSH="/home/evan/vimrc/.zsh/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -62,13 +62,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/vimrc/zcustom
+ZSH_CUSTOM=~/vimrc/.zsh/zcustom
 
 # source .zplug
-export ZPLUG_HOME=/home/evan/.zplug
+export ZPLUG_HOME=/home/evan/vimrc/.zsh/.zplug
 
 # The backbone of zplug
-source ~/.zplug/init.zsh
+source ~/vimrc/.zsh/.zplug/init.zsh
 
 # zplug plugins installations go below ---->
 

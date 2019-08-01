@@ -90,3 +90,5 @@ alias qtbrowse="qutebrowser --debug --debug"
 alias youtubedll="youtube-dl --geo-bypass --merge-output-format mp4 --restrict-filenames -R 99 --max-filesize 2000m --max-downloads 50 --verbose"
 # shinstall.sh (zsh 'apt install' script)
 alias shinstall="~/shinstall.sh"
+# wget
+alias wget="wget -t 99 --retry-connrefused"

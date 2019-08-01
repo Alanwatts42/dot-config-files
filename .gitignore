@@ -4,22 +4,17 @@
 #
 # Author: Evan Sherwood
 # 
-# This repo is in my $HOME directory (which is also the '~' directory in my Ubuntu 18.04
-# Linux environment using Windows Subsystem for Linux (WSL)). Therefore, I found it easier
-# to simply ignore all files in the directory other than the ones I want to include in the
-# repository, rather than use symlinks or some other method to put my .vimrc file
-# somewhere else. 
+# Currently, .zshenv file at $ZDOTDIR/.zshenv contains the assignment of 
+# the $ZDOTDIR variable, which changes the directory that contains all of
+# the zsh dotfiles (.zshrc, .zshenv, etc.) Currently this puts it at
+# $HOME/vimrc/.zsh/ but this can be changed if necessary. However, since
+# I can now sync it with other dotfiles all within the vimrc repository, 
+# it's convenient for it to remain here for the time being, which is why
+# I have added .zsh/.oh-my-zsh to this .gitignore, as it is it's own repo
+# which is not owned by me.
 #
-# '.*' and '/*' makes git ignore everything that isn't also listed in the gitignore with 
-# a '!' meaning 'do not' ignore. I found this easier since my .vimrc is in my $HOME folder
-# and I didn't want to have to worry about symlinks or other workaround.
+# please note: '.*' and '/*' makes git ignore everything that isn't also listed in the gitignore with 
+# a '!' meaning 'do not' ignore.
 
+$HOME/vimrc/.zsh/.oh-my-zsh
 
-# !.vimrc
-# !README.md
-# !.vim/*
-# !.vim/bundle
-# !.vim/ftplugin
-# !.vim/autoload
-# !.vim/templates
-# !.gitignore

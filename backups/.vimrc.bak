@@ -62,11 +62,9 @@ endif
 
 call plug#begin(bundle)
 
-" ==Pipenv/Virtualenv Integration==
+""" ==Development Environment and Enhancements==
 "Plug 'plytophogy/vim-virtualenv'    " required for vim-pipenv
 "Plug 'PieterjanMontens/vim-pipenv'  " integrates vim/pipenv
-
-""" ==Development Environment and Enhancements==
 Plug 'vim-syntastic/syntastic' " A linter, many options, much correct.
 Plug 'python-rope/ropemode'  " Updated version of 'rope-vim' py docs lookup
 Plug 'tpope/vim-surround'  " easy manipulation of surround chars
@@ -81,7 +79,6 @@ Plug 'Valloric/YouCompleteMe'
 " ==Javascript==
 Plug 'w0rp/ale'    " javascript linter
 
-
 """ ==General Functionality==
 Plug 'ctrlpvim/ctrlp.vim'  " Fuzzy finder (files, mru, etc)
 Plug 'mbbill/undotree' " Undo history tool
@@ -95,7 +92,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 """ ==Git and Version Control==
 Plug 'tpope/vim-fugitive' " Git wrapper - control git with vim commands i.e. :Gcommit = git commit
-Plug 'tpope/vim-rhubarb' " front  
+Plug 'tpope/vim-rhubarb' " something to do with git, I honestly forgot
 Plug 'junegunn/gv.vim' " diff tool - requires vim-fugitive to run
 Plug 'sodapopcan/vim-twiggy' " branch manager for git repositories
 Plug 'airblade/vim-gitgutter'  " diff tool - shows changes made to file being edited (as long as it's part of a git repo)
@@ -104,6 +101,26 @@ Plug 'christoomey/vim-conflicted' " tool for merge & rebase conflicts
 """ ==Atypical Filetype Handling==
 Plug 'plasticboy/vim-markdown' " Markdown handling in Vim 
 Plug 'godlygeek/tabular' " Req'd for vim-markdown
+
+
+""" ==Python-vimrc-bundled-plugins==
+Plug 'Loakaltog/powerline'  " tabline tool
+Plug 'fisadev/FixedTaskList.vim' " pending tasks list
+Plug 'rosenfeld/conque-term' " consoles as buffers
+"-------------------=== Snippets support ===--------------------
+Plug 'garbas/vim-snipmate'                " Snippets manager
+Plug 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
+Plug 'tomtom/tlib_vim'                    " dependencies #2
+Plug 'honza/vim-snippets'                 " snippets repo
+"-------------------=== Languages support ===-------------------
+" Plug 'tpope/vim-commentary'               " Comment stuff out
+Plug 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
+Plug 'Rykka/riv.vim'                      " ReStructuredText plugin
+" Plug 'Valloric/YouCompleteMe'             " Autocomplete plugin
+"-------------------=== Python  ===-----------------------------
+Plug 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
+" Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+
 
 call plug#end() " automatically executes: 'filetype plugin indent on'  and 'syntax enable'
 

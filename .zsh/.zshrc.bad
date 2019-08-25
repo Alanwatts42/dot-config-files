@@ -65,7 +65,7 @@ HIST_STAMPS="mm/dd/yyyy"
 ZSH_CUSTOM=~/vimrc/.zsh/zcustom
 
 # source .zplug
-export ZPLUG_HOME=/home/evan/vimrc/.zsh/.zplug
+export ZPLUG_HOME=~/vimrc/.zsh
 
 # The backbone of zplug
 source ~/vimrc/.zsh/.zplug/init.zsh

@@ -1,21 +1,50 @@
-# Prompt setup >>
+#Prompt setup >>
 
 autoload -Uz promptinit
 promptinit
 prompt adam1
 
-
 # Environment variables >>
-export ZSH_CUSTOM="~/zsh_custom"
+# Shellcheck (shell linter) overrides
+export SHELLCHECK_OPTS='--shell=bash --exclude=SC2016'
+
+# Vi style controls
+# EDITOR=vim
+bindkey -v
+
+# Zplug >>
+# Zplug auto-install check
+if [[ ! -d ~/.zplug ]];then
+  git clone https://github.com/zplug/zplug ~/.zplug 
+  source ~/.zplug/init.zsh && zplug update --self
+fi
+# Essential for zplug to work
+source ~/.zplug/init.zsh
+
+# Zsh history search >>
+zplug "zsh-users/zsh-history-substring-search"
+# Zsh syntax highlighting
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# Zsh-autosuggestions 
+zplug "zsh-users/zsh-autosuggestions"
+
+# Look & Feel >>
+zplug "romkatv/powerlevel10k", from:oh-my-zsh, as:theme
+
+# Install packages that have not been installed yet
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+zplug load
 
 
-# Options >>
-setopt histignorealldups sharehistory
-setopt AUTO_CD
-
-# Vim as EDITOR to allow vi style controls
-EDITOR=vim
-
+# Formatting & Completion >>
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
@@ -26,10 +55,9 @@ autoload -Uz compinit
 compinit
 
 
-# Ls colors >>
+# `ls` colors
 d="~/.dircolors"
 test -r $d && eval "$(dircolors $d)"
-
 
 # Text style >>
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -50,44 +78,23 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 
-# Zplug settings >>
-
-# Zplug auto-install check
-if [[ ! -d ~/.zplug ]];then
-  git clone https://github.com/zplug/zplug ~/.zplug 
-  source ~/.zplug/init.zsh && zplug update --self
-fi
-
-# Essential for zplug to work
-source ~/.zplug/init.zsh
-
-# Zsh history search
-zplug "zsh-users/zsh-history-substring-search"
-# Zsh syntax highlighting
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-# Zsh-autosuggestions 
-zplug "zsh-users/zsh-autosuggestions"
-
-# Theme
-zplug "romkatv/powerlevel10k", from:oh-my-zsh, as:theme
-
-# Install packages that have not been installed yet
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    else
-        echo
-    fi
-fi
-
-zplug load
-
+# Misc options >>
+setopt histignorealldups sharehistory
+setopt AUTO_CD
 
 # Sources >>
 source ~/.aliases
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-# source ~/.purepower
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# To customize Powerlevel10k, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# Tilix config >
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte*.sh
+fi
+
+# Custom shell commands >
+# to add custom cmds, run `let's kick shell` or edit $HOME/.kick_shell'  
+if [ -f "$HOME/.kick_shell" ] 
+then
+    source "$HOME/.kick_shell"
+fi

@@ -1,7 +1,9 @@
 #!/bin/zsh
+# Sync files inside a git repository with the same files in $HOME/ dir
+# Dotfiles stay in their original locations, but can also sync to the same git repository.
 
-# cli set-up with args: -h for help and -m for commit message
-# great example for simple cli (command line interface) with basic args
+# Cli args: -h for help and -m for commit message
+# Great example cli (command line interface) with basic args
 usage="$(basename "$0") [-h] [-m "$1"] --a file sync utility that pushes your linux dotfiles to a github repository
 
 where:

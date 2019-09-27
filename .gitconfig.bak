@@ -5,3 +5,5 @@
 	ui = auto
 [credential]
 	helper = cache --timeout=3600
+[http]
+	postBuffer = 1048576000

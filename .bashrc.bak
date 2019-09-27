@@ -48,7 +48,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=no
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -121,6 +121,15 @@ if ! shopt -oq posix; then
   fi
 fi
 # RETROPIE PROFILE START
+
+function getIPAddress() {
+    local ip_route
+    ip_route=$(ip -4 route get 8.8.8.8 2>/dev/null)
+    if [[ -z "$ip_route" ]]; then
+        ip_route=$(ip -6 route get 2001:4860:4860::8888 2>/dev/null)
+    fi
+    [[ -n "$ip_route" ]] && grep -oP "src \K[^\s]+" <<< "$ip_route"
+}
 
 function retropie_welcome() {
     local upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
@@ -209,13 +218,13 @@ function retropie_welcome() {
                 out+="${fgred}Uptime.............: ${UPTIME}"
                 ;;
             6)
-                out+="${fgred}Memory.............: $(grep MemFree /proc/meminfo | awk {'print $2'})kB (Free) / $(grep MemTotal /proc/meminfo | awk {'print $2'})kB (Total)"
+                out+="${fgred}Memory.............: $(grep MemFree /proc/meminfo | awk "{'print $2'}")kB (Free) / $(grep MemTotal /proc/meminfo | awk "{'print $2'}")kB (Total)"
                 ;;
             7)
                 out+="${fgred}Running Processes..: $(ps ax | wc -l | tr -d " ")"
                 ;;
             8)
-                out+="${fgred}IP Address.........: $(ip route get 8.8.8.8 2>/dev/null | awk '{print $NF; exit}')"
+                out+="${fgred}IP Address.........: $(getIPAddress)"
                 ;;
             9)
                 out+="Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F"
@@ -229,5 +238,14 @@ function retropie_welcome() {
     echo -e "\n$out"
 }
 
-retropie_welcome
-# RETROPIE PROFILE END
+# Source '~/.kick_shell' which is where I define custom shell commands
+if [ -f "$HOME/.kick_shell" ]
+then
+    # shellcheck source=/dev/null
+    source "$HOME/.kick_shell"
+fi
+
+# Shellcheck overrides
+export SHELLCHECK_OPTS='--shell=bash,zsh --exclude=SC2016,SC2035'
+
+# export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"

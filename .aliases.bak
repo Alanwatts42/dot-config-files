@@ -1,31 +1,57 @@
-#                               ALIASES #                                 ***
+#    ALIASES  
+#   ---***---
 # Reference(s): 
 # <https://stackoverflow.com/questions/5240755/how-to-use-aliases-defined-in-bashrc-in-other-scripts>
 # Bash aliases - examples found in /usr/share/doc/bash-doc/examples
 # Functions - similar to aliases, but can have things like parameters/variables
 # Example function - "apt-grab <program> = "sudo apt-get -f install <program> --install-suggests"
-apt-grab(){
-    "sudo apt-get install ${0} --install-suggests"
+# }
+
+# func wifi-func() {
+#     "sudo nmcli dev wifi connect ${1} password ${2}"
+# }
+#
+shinstall () {
+    "sudo apt-get -f install $1 --install-suggests"
 }
 
-wifi-func(){
-    "sudo nmcli dev wifi connect ${0} password ${1}"
+vimget () {
+    vim <("$@")
+}
+
+lessget () {
+    less -f <("$@")
+}
+
+clipfile () {
+    xclip -i -selection c "$1"
 }
 
 # Terminal navigation
 alias ls="ls -a --color=auto"
 alias lss='ls'
-alias lsa="ls -apw 100 --group-directories-first"
+alias lsa="ls -apw 110 --group-directories-first"
 alias lsg="ls -GAp --group-directories-first"
 alias lsd="ls -plax --group-directories-first"
 
 # Apt or apt-get shortcuts for convenience
-alias aptg-up="sudo apt-get update && sudo apt-get dist-upgrade"
-alias aptg="sudo apt-get"
-alias aptg-in="sudo apt-get -f install"
-alias apt-up="sudo apt update && sudo apt upgrade"
-alias apt-in="sudo apt install"
-alias apt-s="sudo apt search"
+alias aptgup="sudo apt-get update && sudo apt-get dist-upgrade"
+alias aptgo="sudo apt-get"
+alias aptinstall="sudo apt-get -f install"
+alias aptgoup="sudo apt update && sudo apt upgrade"
+alias aptgin="sudo apt-get install"
+alias aptseek="sudo apt search"
+alias aptpurge="sudo apt-get purge"
+alias aptremove="sudo apt-get remove"
+# add/remove repositories
+alias aptaddrepo="sudo add-apt-repository"
+alias aptrmrepo="sudo add-apt-repository --remove"
+alias aptrmppa:="sudo add-apt-repository --remove ppa:"
+alias aptmylist="sudo apt list --installed"
+alias aptmylistgrep="sudo apt list --installed | grep"
+alias aptbiglistgrep="sudo apt list | grep"
+alias aptbiglistvim="vim <(sudo apt list)"
+alias apshow="apt show"
 
 # Sets screen brightness for monitor i.e. backlight (number between 0 and 1)
 alias xlight="xrandr --output eDP-1 --brightness"
@@ -34,7 +60,7 @@ alias xbright="xrandr --output eDP-1 --brightness 1"
 
 # Wifi operations via the terminal - very long, very specific, aliases therefore very necessary
 alias wifi-go="sudo nmcli dev wifi connect"
-alias mifi-go="sudo nmcli dev wifi connect MY_EX-WIFI_GOT_THE_HOUSE password amqv294#"
+alias mifi="sudo nmcli dev wifi connect MY_EX-WIFI_GOT_THE_HOUSE password amqv294#"
 alias wifi-scan="sudo nmcli dev wifi"
 
 # Pip, pipenv, and python
@@ -85,12 +111,20 @@ alias py="python3"
 # Custom Scripts
 alias sync-dfs="~/sync.sh"
 
+# Custom Shell Commands
+alias lets_kick_shell="vim $HOME/.kick_shell"
+
 # --Apps--
 # qutebrowser (start with debug features on)
 alias qtbrowse="qutebrowser --debug --debug"
 # youtube-dl
 alias youtubedll="youtube-dl --geo-bypass --merge-output-format mp4 --restrict-filenames -R 99 --max-filesize 2000m --max-downloads 50 --verbose"
-# shinstall.sh (zsh 'apt install' script)
-alias shinstall="~/shinstall.sh"
 # wget
 alias wget="wget -t 99 --retry-connrefused"
+# curl
+alias curl="curl -retry 99 --retry-connrefused"
+
+# ecm
+alias unecm="ecm-uncompress"
+alias ecm="ecm-compress"
+
